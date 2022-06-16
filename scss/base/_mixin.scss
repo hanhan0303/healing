@@ -1,0 +1,118 @@
+/*字體大小設定start*/
+@mixin font_size_400L-text {
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: $text_color-dark;
+}
+
+@mixin font_size_400M {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+@mixin font_size_400S-text {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: $text_color-dark;
+}
+
+@mixin font_size_400XS-text {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: $text_color-dark;
+}
+
+@mixin font_size_500L-text {
+  font-size: 2.25rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: $text_color-default;
+}
+
+@mixin font_size_500M-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: $text_color-default;
+}
+
+@mixin font_size_500S {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+@mixin font_size_500XS {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+@mixin font_size_700L {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+@mixin font_size_700M {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+@mixin font_size_700S {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+@mixin font_size_700-XS {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/*字體大小設定end*/
+/*RWD設定-media*/
+@mixin pc {
+  @media(max-width:1280px) {
+    @content;
+  }
+}
+
+@mixin pad {
+  @media(max-width:768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media(max-width:414px) {
+    @content;
+  }
+}
+
+/*RWD-end*/
+@mixin text-hide {
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-nowrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+}

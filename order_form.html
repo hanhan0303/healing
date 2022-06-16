@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>心靈療癒所｜填寫資料</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <meta name="keywords" content="療癒,heal,放鬆" />
+    <meta
+      name="description"
+      content="讓療癒回歸於自我本質，將身心靈的療癒體驗融入至生活中，並為忙碌的日常，找回自在的放鬆時刻。"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta property="og:title" content="心靈療癒所" />
+    <meta property="og:description" content="讓療癒回歸於自我本質，將身心靈的療癒體驗融入至生活中，並為忙碌的日常，找回自在的放鬆時刻。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="FB上顯示的網址" />
+    <meta property="og:image" content="FB上顯示的圖片" /> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <a href="index.html"><h1>心靈療癒所</h1></a>
+        <div>
+          <a class="a_buttons-sm" href="products_list.html">前往報名</a>
+          <nav>
+            <div class="nav_btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <ul class="nav_menu">
+              <li>
+                <a href="index.html"
+                  ><img src="images/頁面icon/nav-home.svg" /> 首頁</a
+                >
+              </li>
+              <li>
+                <a href="products_list.html"
+                  ><img src="images/頁面icon/side-menu-lesson.svg" />
+                  所有課程</a
+                >
+              </li>
+              <li>
+                <a href="faq.html"
+                  ><img src="images/頁面icon/nav-question.svg" /> 常見問題</a
+                >
+              </li>
+              <li>
+                <a href="contant.html"
+                  ><img src="images/頁面icon/nav-service.svg" /> 聯絡我們</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <div class="step">
+          <div>
+            <span class="step1">1</span>
+            <p>填寫資料</p>
+          </div>
+          <div>
+            <span class="step2">2</span>
+            <p>訂單確認</p>
+          </div>
+          <div>
+            <span class="step3">3</span>
+            <p>完成訂購</p>
+          </div>
+        </div>
+        <form>
+          <div class="order_content">
+            <h3>行程資料確認</h3>
+            <table>
+              <tr>
+                <th><h4>課程/遊程資料</h4></th>
+                <th></th>
+                <th><h4>人數</h4></th>
+                <th><h4>總計</h4></th>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="images/products/meditation/01願望成真冥想/p-01.jpg"
+                  />
+                </td>
+                <td>
+                  <h5>課程/遊程標題：願望成真冥想課程</h5>
+                  <p>課程/出發日期：2022/07/02(六)</p>
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    id="people_number"
+                    name="people_number"
+                    min="2"
+                    max="10"
+                  />>
+                </td>
+                <td><span>NT$2400</span></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td><span>1</span></td>
+                <td><span>NT$2400</span></td>
+              </tr>
+            </table>
+          </div>
+          <div class="apply_information">
+            <div>
+              <h4>報名資料填寫</h4>
+              <p>(如有兩人以上，僅填寫主要聯絡人資訊)</p>
+              <div class="order_form">
+                <div class="form_item">
+                  <input
+                    id="customer_name"
+                    name="customer_name"
+                    type="text"
+                    placeholder="請輸入姓名"
+                    required
+                  />
+                  <label for="customer_name">姓名 Name</label>
+                </div>
+                <div class="form_item">
+                  <input
+                    id="customer_email"
+                    name="customer_email"
+                    type="email"
+                    placeholder="請輸入電子郵件"
+                    required
+                  />
+                  <label for="customer_email">電子郵件 Email</label>
+                </div>
+                <div class="form_item">
+                  <input
+                    id="customer_phone"
+                    name="customer_phone"
+                    type="tel"
+                    placeholder="請輸入電話號碼"
+                    onkeyup="this.value=this.value.replace(/\D/g,'')"
+                    onafterpaste="this.value=this.value.replace(/\D/g,'')"
+                    required
+                  />
+                  <label for="customer_phone">電話 Phone Number</label>
+                </div>
+                <div class="form_item">
+                  <input
+                    id="customer_id"
+                    name="customer_id"
+                    type="text"
+                    placeholder="請輸入身分證字號"
+                    onkeyup="value=value.replace(/[\W]/g,'') "
+                    onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"
+                    required
+                  />
+                  <label for="customer_id">身分證 ID</label>
+                </div>
+                <i class="fa-solid fa-circle-check"></i>
+                <div class="form_item">
+                  <input
+                    id="customer_receipt"
+                    name="customer_receipt"
+                    type="text"
+                    placeholder="請輸入統編號碼"
+                    onkeyup="this.value=this.value.replace(/\D/g,'')"
+                    onafterpaste="this.value=this.value.replace(/\D/g,'')"
+                  />
+                  <label for="customer_receipt"
+                    >開立統編收據(如無，則忽略欄位)</label
+                  >
+                </div>
+                <div class="form_item">
+                  <input
+                    id="customer_note"
+                    name="customer_note"
+                    type="text"
+                    placeholder="請輸入備註及注意事項"
+                  />
+                  <label for="customer_note">備註及注意事項</label>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h4>匯款資料</h4>
+              <div>
+                <p>銀行名稱：台灣銀行 城中分行</p>
+                <p>銀行代碼：004</p>
+                <p>匯款帳戶：0023-0802-8100-2961</p>
+                <p>※請使用匯款方式匯入金額</p>
+              </div>
+              <hr />
+              <h4>結帳資料填寫</h4>
+              <div class="order_form">
+                <div class="form_item">
+                  <input
+                    id="customer_bank"
+                    name="customer_bank"
+                    type="text"
+                    placeholder="請輸入銀行名稱"
+                    required
+                  />
+                  <label for="customer_bank">銀行名稱</label>
+                </div>
+                <div class="form_item">
+                  <input
+                    id="account number"
+                    name="account number"
+                    type="text"
+                    placeholder="請輸入匯款帳戶"
+                    onkeyup="this.value=this.value.replace(/\D/g,'')"
+                    onafterpaste="this.value=this.value.replace(/\D/g,'')"
+                    required
+                  />
+                  <label for="account number">匯款帳戶</label>
+                </div>
+                <div class="form_item">
+                  <input
+                    id="customer_note"
+                    name="customer_note"
+                    type="text"
+                    placeholder="請輸入備註及注意事項"
+                  />
+                  <label for="customer_note">備註及注意事項</label>
+                </div>
+              </div>
+              <p>**匯款後將與您確認匯款後5碼</p>
+            </div>
+          </div>
+          <input type="submit" value="確認訂單" />
+        </form>
+        <i class="fa-solid fa-circle-chevron-up"></i>
+      </main>
+      <footer>
+        <a
+          href="https://www.facebook.com/MeditionHealingSpace/about"
+          target="_blank"
+          ><img src="images/頁面icon/footer-facebook.svg" alt="facebook"
+        /></a>
+        <a href="https://page.line.me/frk6049t" target="_blank"
+          ><img src="images/頁面icon/footer-line.svg" alt="line"
+        /></a>
+        <a href="https://www.instagram.com/ccrt.777/" target="_blank"
+          ><img src="images/頁面icon/footer-instagram.svg" alt="instagram"
+        /></a>
+        <p>© 2022 心靈療癒所 All rights Reserved.</p>
+      </footer>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/e4bfe886c9.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

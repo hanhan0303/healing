@@ -1,0 +1,64 @@
+.a_buttons {
+  &-lg {
+    @include font_size_500S;
+    display: inline-block;
+    width: 292px;
+    padding: 20px;
+    color: $primary_color-dark;
+    text-align: center;
+    border: 1px solid $primary_color-dark;
+    border-radius: 20px;
+    background-color: $grayscale-tint;
+
+    &:hover {
+      color: $grayscale-tint;
+      background-color: $primary_color-dark;
+    }
+
+    ;
+  }
+
+  ;
+
+  &-md {
+    @include font_size_500XS;
+    display: inline-block;
+    width: 60%;
+    padding: 16px;
+    color: $primary_color-dark;
+    text-align: center;
+    border: 1px solid $primary_color-dark;
+    border-radius: 20px;
+    background-color: $grayscale-tint;
+
+    &:hover {
+      color: $grayscale-tint;
+      background-color: $primary_color-dark;
+    }
+
+    ;
+  }
+
+  ;
+
+  &-sm {
+    @include font_size_500XS;
+    display: inline-block;
+    width: 112px;
+    padding: 10px;
+    color: $primary_color-dark;
+    text-align: center;
+    border: 1px solid $primary_color-dark;
+    border-radius: 15px;
+    background-color: $grayscale-tint;
+
+    &:hover {
+      color: $grayscale-tint;
+      background-color: $primary_color-dark;
+    }
+
+    ;
+  }
+
+  ;
+}

@@ -1,0 +1,582 @@
+.banner {
+  position: relative;
+  background: url(/images/home-banner.png) no-repeat center/cover;
+  min-height: 100vh;
+
+  h2 {
+    position: absolute;
+    top: 26.1vh;
+    right: 20.7vw;
+    writing-mode: vertical-rl;
+    font-size: 48px;
+    line-height: 1.25;
+    color: $grayscale-tint;
+    user-select: none;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    @include pc {
+      top: 20.9vh;
+      right: 16.6vw;
+    }
+
+    ;
+
+    @include pad {
+      @include font_size_400L-text;
+      color: $grayscale-tint;
+      top: 15.5vh;
+      right: 12.3vw;
+    }
+
+    ;
+
+    @include mobile {
+      @include font_size_400M;
+      top: 132px;
+      right: 43px;
+    }
+
+    ;
+  }
+
+  ;
+}
+
+.about {
+  padding-top: 237px;
+  padding-bottom: 194px;
+  padding-left: 23.4vw;
+
+  /*因應rwd改vw-怕破版所以只設一邊*/
+  @include pad {
+    @include flex-center;
+    padding: 56px 0;
+  }
+
+  ;
+
+  @include mobile {
+    padding: 32px 0 61px;
+  }
+
+  ;
+
+  &_us {
+    position: relative;
+    background-color: $primary_color-tint;
+    width: $about_us_width;
+    /*因應rwd所以算出寬度是佔多少vw*/
+    padding: 64px 5.9% 75px 20%;
+    /*因應rwd所以改成%數-只有寬度改變.高度固定*/
+    border-radius: 20px;
+
+    @include pad {
+      position: static;
+      width: 73vw;
+      background-color: $grayscale-tint;
+      padding: 0;
+      border-radius: 0;
+    }
+
+    ;
+
+    @include mobile {
+      width: 80.7vw;
+    }
+
+    ;
+
+    h3 {
+      @include font_size_500L-text;
+      margin-bottom: 32px;
+
+      @include mobile {
+        @include font_size_500M-text;
+        margin-bottom: 15px;
+      }
+
+      ;
+    }
+
+    ;
+
+    p {
+      @include font_size_400S-text;
+
+      @include mobile {
+        @include font_size_400XS-text;
+      }
+
+      ;
+    }
+
+    ;
+  }
+
+  ;
+
+  &_img {
+    @include flex-center;
+    position: absolute;
+    right: $about_us_width*0.8246;
+    /*因應rwd依us的區塊大小變更位置->img/us=0.8246*/
+    top: -106px;
+    width: $about_us_width*0.3509;
+    /*因應rwd依us的區塊大小變更->img/us=0.3509*/
+    min-width: 240px;
+    height: 315px;
+    border-radius: 20px;
+    background: url(/images/hmoe-about.png) no-repeat center/cover;
+
+    @include pad {
+      position: static;
+      width: 73vw;
+      height: 337px;
+      margin-top: 56px;
+    }
+
+    ;
+
+    @include mobile {
+      width: 80.7vw;
+      height: 222px;
+      margin-top: 32px;
+    }
+
+    ;
+
+    img {
+      width: 150px;
+      height: 196px;
+
+      @include pad {
+        width: 200px;
+        height: 260px
+      }
+
+      ;
+
+      @include mobile {
+        width: 120px;
+        height: 157px;
+      }
+
+      ;
+    }
+
+    ;
+  }
+
+  ;
+
+  &_logo {
+    position: absolute;
+    bottom: -56px;
+    right: -50px;
+
+    @include pad {
+      display: none;
+    }
+
+    ;
+  }
+
+
+  ;
+}
+
+.products {
+  background: url(/images/contact-banner.png) no-repeat center/cover;
+  padding-top: 134px;
+  padding-left: $products_item_grid;
+  padding-right: $products_item_grid;
+  padding-bottom: 160px;
+
+  @include pc {
+    padding-left: $products_item_grid_pc;
+    padding-right: $products_item_grid_pc;
+  }
+
+  ;
+
+  @include mobile {
+    padding-left: $products_item_grid_mobile;
+    padding-right: $products_item_grid_mobile;
+  }
+
+  ;
+
+  h3 {
+    @include font_size_500L-text;
+    margin-bottom: 24px;
+  }
+
+  ;
+
+  p {
+    @include font_size_400S-text;
+  }
+
+  ;
+
+  &_btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+
+    div {
+      width: 50px;
+      height: 50px;
+      margin-left: 20px;
+      cursor: pointer;
+
+      @include mobile {
+        width: 36px;
+        height: 36px;
+        margin-left: 12px;
+      }
+
+      ;
+    }
+
+    ;
+
+  }
+
+  ;
+
+  ul {
+    @include flex-nowrap;
+
+    li {
+      @include flex-center;
+      flex-direction: column;
+      margin-right: $products_item_grid;
+      width: $products_item_width;
+
+      @include pc {
+        width: $products_item_width_pc;
+        margin-right: $products_item_grid_pc;
+      }
+
+      ;
+
+      @include pad {
+        width: $products_item_width_pad;
+      }
+
+      ;
+
+      @include mobile {
+        width: $products_item_width_pc;
+        margin-right: $products_item_grid_mobile;
+      }
+
+      ;
+
+
+
+      h4 {
+        @include font_size_500M-text;
+        overflow: hidden;
+
+        @include pc {
+          width: $products_item_width_pc;
+        }
+
+        ;
+
+        @include pad {
+          width: $products_item_width_pad;
+        }
+
+        ;
+
+        @include mobile {
+          width: $products_item_width_mobile;
+        }
+
+        ;
+      }
+
+      ;
+
+      p {
+        @include font_size_400XS-text;
+        height: 46px;
+        width: 100%;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow: hidden;
+        margin-top: $products_item_text-margin;
+      }
+
+      ;
+
+      a {
+        margin-top: $products_item_text-margin;
+      }
+
+      ;
+    }
+
+    ;
+  }
+
+  ;
+
+}
+
+.product-img {
+  width: $products_item_width;
+  margin-bottom: $products_item_text-margin;
+
+  @include pc {
+    width: $products_item_width_pc;
+  }
+
+  ;
+
+  @include pad {
+    width: $products_item_width_pad;
+  }
+
+  ;
+
+  @include mobile {
+    width: $products_item_width_mobile;
+  }
+
+  ;
+
+  img {
+    border-radius: 20px;
+    border-width: $products_img_border;
+    border-style: solid;
+    border-color: $primary_color-dark;
+  }
+
+  ;
+}
+
+.feedback {
+  padding-top: 153px;
+  padding-right: $feedback_padding_r;
+  padding-bottom: 163px;
+
+  @include pc {
+    margin: 0 auto;
+    padding-top: 55px;
+    padding-bottom: 100px;
+    padding-left: $feedback_padding_pc;
+    padding-right: $feedback_padding_pc;
+  }
+
+  ;
+
+  @include pad {
+    margin: 0 auto;
+    padding-top: 55px;
+    padding-bottom: 100px;
+    padding-left: $feedback_padding_pad;
+    padding-right: $feedback_padding_pad;
+  }
+
+  ;
+
+  &_btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+
+    div {
+      width: 50px;
+      height: 50px;
+      margin-left: 20px;
+      cursor: pointer;
+
+      @include mobile {
+        width: 36px;
+        height: 36px;
+        margin-left: 12px;
+      }
+
+      ;
+    }
+
+    ;
+  }
+
+  ;
+
+  &_content {
+    display: flex;
+    align-items: center;
+  }
+
+  ;
+
+  &_items {
+    @include flex-nowrap;
+    margin-left: $feedback_item_margin_l;
+    width: $feedback_all-items_width;
+
+    @include pc {
+      width: $feedback_all-items_width_pc;
+      margin-left: 0;
+    }
+
+    li {
+      @include flex-center;
+      flex-direction: column;
+
+      margin-right: $feedback_item_grid;
+      // @if $feedback_item_grid>=0 {
+      //   margin-right: $feedback_item_grid;
+      // }
+
+      // @else {
+      //   margin-right: 30px;
+      // }
+
+      width: $feedback_item_width;
+
+      @include pc {
+        margin-right: $feedback_item_grid_pc;
+      }
+
+      ;
+
+      @include pad {
+        margin-right: $feedback_item_grid_pad;
+      }
+
+      ;
+
+      div {
+        width: $feedback_item_width;
+      }
+
+      ;
+
+      h4 {
+        @include font_size_500M-text;
+        margin-top: 9px;
+      }
+
+      ;
+
+      div.star-icon {
+        margin: 6px 0;
+        color: $primary_color-default;
+        font-size: 24px;
+        text-align: center;
+
+        span {
+          @include font_size_400S-text;
+          margin-left: 5px;
+        }
+
+        ;
+      }
+
+      ;
+
+      p {
+        @include font_size_400XS-text;
+        height: 46px;
+        width: 100%;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow: hidden;
+      }
+
+      ;
+
+    }
+
+    ;
+  }
+}
+
+.pc {
+  &_hide {
+    display: none;
+
+    @include pc {
+      display: block;
+      text-align: center;
+
+      h3 {
+        @include font_size_500L-text
+      }
+
+      ;
+
+      p {
+        @include font_size_400S-text;
+        margin-top: 24px;
+        margin-bottom: 17px
+      }
+
+      ;
+    }
+
+    ;
+  }
+
+  ;
+
+  &_show {
+    position: relative;
+    width: $feedback_content_pcshow_width;
+    height: 395px;
+    border-radius: 0 20px 20px 0;
+    background-color: $primary_color-tint;
+    padding: 137px 3.75vw 161px 8.86vw;
+    z-index: -10;
+
+    @include pc {
+      display: none;
+    }
+
+    ;
+
+    h3 {
+      @include font_size_500L-text
+    }
+
+    ;
+
+    p {
+      @include font_size_400S-text;
+      margin-top: 24px;
+    }
+
+    ;
+
+    &_logo {
+      position: absolute;
+      top: 137px;
+      right: $feedback_content_pcshow_width*0.5754;
+      width: 340px;
+      z-index: -9;
+    }
+
+    ;
+  }
+
+  ;
+}
+
+main>i.go-top {
+  font-size: 50px;
+  color: $text_color-dark;
+  position: fixed;
+  right: 95px;
+  bottom: 10vh;
+  cursor: pointer;
+  z-index: 100;
+}
+
+;

@@ -1,0 +1,30 @@
+// form效果-input必填
+.form_item{
+  display: flex;
+  flex-direction: column-reverse;
+	input{
+		font-size: 16px;
+		padding: 14px 16px;
+		border-radius: 10px;
+		border: 1px solid #584024;
+		&:focus{
+			outline:none;
+			box-shadow: 0px 0px 0px 4px rgba(88, 64, 36, 0.4);
+		};
+		&:required + label::after{
+			content: '必填';
+			color: #AE1914;
+			font-size: 14px;
+			cursor: default;
+		};
+	};
+	label{
+		display: flex;
+		justify-content: space-between;
+		font-size: 16px;
+		color: #584024;
+		line-height: 1.5;
+		margin: 5px;
+		cursor: pointer;
+	};
+}
