@@ -36,7 +36,7 @@ $feedback_all-items_width_pc: 88.68vw;
 $feedback_all-items_width_mobile: 79vw;
 $feedback_content_pcshow_width: 32.8vw;
 
-
+/*feedback-items間的寬度計算*/
 // $feedback_item_grid: calc((99vw - ((#{$feedback_item_width} * 4) + #{$feedback_padding_r} + #{$feedback_item_margin_l} + #{$feedback_content_pcshow_width})) / 3);
 // $feedback_item_grid_pc: calc((99vw - (#{$feedback_item_width} * 4) - (#{$feedback_padding_pc}*2)) / 3);
 // $feedback_item_grid_pc1080:calc((99vw - (#{$feedback_item_width} * 3) - (#{$feedback_padding_pc}*2)) / 2);

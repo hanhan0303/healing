@@ -57,6 +57,7 @@ table {
 /*index首頁-about-us的區塊寬*/
 /*index首頁-products-item的區塊*/
 /*index首頁-feedback的區塊*/
+/*feedback-items間的寬度計算*/
 * {
   margin: 0;
   padding: 0;
@@ -1104,8 +1105,69 @@ main > i.go-top {
   z-index: 100;
 }
 
+.products__banner {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(/images/bg-banner01.jpg);
+  height: 484px;
+  display: flex;
+  align-items: center;
+  padding-left: 16vw;
+}
+.products__banner h2 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #584024;
+  transform: translateY(25%);
+}
+
+.products__nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 110px 7% 30px 5%;
+}
+.products__nav__breadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #584024;
+}
+.products__nav__breadcrumb a {
+  color: #584024;
+}
+.products__nav__filter__pad-show {
+  opacity: 0;
+}
+.products__nav__filter__pad-hide select {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #e8b78e;
+  width: 173px;
+  height: 36px;
+  border-radius: 5px;
+  border: 1px solid #e8b78e;
+  padding: 6px 8px 8px;
+  cursor: pointer;
+  outline: none;
+}
+.products__nav__filter__pad-hide select option:disabled {
+  color: #ffffff;
+  background-color: #a86c46;
+}
+
+.products-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 7% 200px 5%;
+}
 .products-list__nav {
-  width: 243px;
+  min-width: 243px;
   border-radius: 10px;
 }
 .products-list__nav a {
@@ -1113,6 +1175,26 @@ main > i.go-top {
 }
 .products-list__nav a div {
   margin-right: 10px;
+}
+.products-list__main {
+  width: 70vw;
+}
+
+.product__nav {
+  display: flex;
+  justify-content: space-between;
+}
+.product__nav__breadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #584024;
+}
+.product__nav__breadcrumb a {
+  color: #584024;
 }
 
 .contact__banner {

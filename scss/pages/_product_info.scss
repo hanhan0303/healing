@@ -1,0 +1,14 @@
+.product__nav {
+  display: flex;
+  justify-content: space-between;
+  // padding: 110px 7% 30px 5%;
+
+  &__breadcrumb {
+    @include flex-center;
+    @include font_size_400S-text;
+
+    a {
+      color: $text_color-dark;
+    }
+  }
+}
