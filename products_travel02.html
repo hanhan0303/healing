@@ -76,50 +76,60 @@
         </div>
       </header>
       <main>
-        <div class="banner"></div>
-        <div>
-          <div>
-            <div>
-              <a href="index.html">首頁</a> /
-              <a href="products_list.html">所有課程</a> /
-              <p>巴庫拉斯山居秘境</p>
-            </div>
-            <ul>
-              <li>
-                <a href="products_list.html"
-                  ><img
-                    src="images/頁面icon/side-menu-lesson.svg"
-                    alt="icon"
-                  />所有課程</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><img
-                    src="images/頁面icon/side-menu-yoga.svg"
-                    alt="icon"
-                  />瑜珈課程</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><img
-                    src="images/頁面icon/side-menu-travel.svg"
-                    alt="icon"
-                  />深度旅行</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><img
-                    src="images/頁面icon/side-menu-meditation.svg"
-                    alt="icon"
-                  />冥想課程</a
-                >
-              </li>
-            </ul>
+        <div class="product__banner"></div>
+        <div class="product__nav">
+          <div class="product__nav__breadcrumb">
+            <a href="index.html">首頁</a> /
+            <a href="products_list.html">所有課程</a> /
+            <p>願望成真冥想課程</p>
           </div>
-          <div>
+          <div class="product__nav__filter">
+            <div class="products__nav__filter__pad-show">
+              <select name="lesson">
+                <option value="all">所有課程</option>
+                <option value="yoga">瑜珈課程</option>
+                <option value="travel">深度旅行</option>
+                <option value="meditation">冥想課程</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <ul class="products-list__nav">
+            <li>
+              <a href="products_list.html"
+                ><img
+                  src="images/頁面icon/side-menu-lesson.svg"
+                  alt="icon"
+                />所有課程</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="images/頁面icon/side-menu-yoga.svg"
+                  alt="icon"
+                />瑜珈課程</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="images/頁面icon/side-menu-travel.svg"
+                  alt="icon"
+                />深度旅行</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="images/頁面icon/side-menu-meditation.svg"
+                  alt="icon"
+                />冥想課程</a
+              >
+            </li>
+          </ul>
+          <div class="product__main">
             <h2>巴庫拉斯山居秘境｜南投二日遊</h2>
             <p>
               「走進山林，在撫慰人心的山河風光下來一場樸實動人的山居之旅：讓本質帶領你拜訪隱居山林的現代神農氏，在豐富的故事解說中，認識藥草與野生植物。」
@@ -182,7 +192,7 @@
                   />
                 </div>
               </article>
-              <div class="line"></div>
+              <hr />
               <article>
                 <h3>行程說明</h3>
                 <section>
@@ -252,7 +262,7 @@
                   </p>
                 </section>
               </article>
-              <div class="line"></div>
+              <hr />
               <article>
                 <h3>注意事項</h3>
                 <ul>
