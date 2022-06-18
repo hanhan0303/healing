@@ -204,15 +204,32 @@ header div {
   font-weight: 500;
   line-height: 1.25;
   color: #a86c46;
-  display: block;
+  display: flex;
+  align-items: center;
   padding: 16px 14px;
 }
-.nav_menu a img {
+.nav_menu a div {
   width: 24px;
+  margin-right: 5px;
 }
 .nav_menu a:hover {
   background: #e8b78e;
   color: #fff7f0;
+}
+.nav_menu a:hover div img {
+  opacity: 0;
+}
+.nav_menu a:hover div.nav_menu-home {
+  background-image: url(/images/頁面icon/nav-home-hover.svg);
+}
+.nav_menu a:hover div.nav_menu-products {
+  background-image: url(/images/頁面icon/side-menu-lesson-hover.svg);
+}
+.nav_menu a:hover div.nav_menu-qa {
+  background-image: url(/images/頁面icon/nav-question-hover.svg);
+}
+.nav_menu a:hover div.nav_menu-contact {
+  background-image: url(/images/頁面icon/nav-service-hover.svg);
 }
 
 footer {
