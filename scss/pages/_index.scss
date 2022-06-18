@@ -1,6 +1,6 @@
 .banner {
   position: relative;
-  background: url(/images/home-banner.png) no-repeat center/cover;
+  background: url(/images/home-banner.jpg) no-repeat center/cover;
   min-height: 100vh;
 
   h2 {
@@ -118,7 +118,7 @@
     min-width: 240px;
     height: 315px;
     border-radius: 20px;
-    background: url(/images/hmoe-about.png) no-repeat center/cover;
+    background: url(/images/about-banner.jpg) no-repeat center/cover;
 
     @include pad {
       position: static;
@@ -174,7 +174,7 @@
 }
 
 .products {
-  background: url(/images/contact-banner.png) no-repeat center/cover;
+  background: url(/images/products-banner.jpg) no-repeat center/cover;
   padding: 134px 0 160px;
   padding-left: $products_item_grid;
   padding-right: $products_item_grid;
@@ -539,6 +539,7 @@
 }
 
 main>i.go-top {
+  display: none;
   font-size: 50px;
   color: $text_color-dark;
   position: fixed;

@@ -1,0 +1,22 @@
+.faq_title {
+  display: flex;
+  flex-direction: column;
+  padding: 70px 15% 160px;
+
+  @include pad {
+    padding: 64x 5% 72px;
+  }
+
+  @include mobile {
+    padding: 32px 8% 64px;
+  }
+
+  h3 {
+    @include font_size_500L-text;
+    margin-bottom: 18px;
+
+    @include mobile {
+      margin-bottom: 15px;
+    }
+  }
+}

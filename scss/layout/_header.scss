@@ -2,9 +2,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
   padding: 0 5%;
-  width: 100%;
+  width: 100vw;
+  max-width: 1920px;
   height: 83px;
   position: fixed;
   background: $grayscale-tint;
@@ -14,8 +14,6 @@ header {
   @include mobile {
     height: 70px;
   }
-
-  ;
 
   &>a {
     @include text-hide;
@@ -29,10 +27,7 @@ header {
       height: 40px;
     }
 
-    ;
   }
-
-  ;
 
   div {
     display: flex;
@@ -42,14 +37,8 @@ header {
       @include mobile {
         display: none;
       }
-
-      ;
     }
-
-    ;
   }
-
-  ;
 }
 
 .nav_btn {
@@ -73,14 +62,10 @@ header {
       margin-top: 20px;
     }
 
-    ;
-
     &:nth-child(3) {
       margin-top: -20px;
     }
   }
-
-  ;
 
   &.active {
     span {
@@ -89,26 +74,16 @@ header {
         transform: rotate(225deg);
       }
 
-      ;
-
       &:nth-child(2) {
         transform: rotate(315deg);
       }
-
-      ;
 
       &:nth-child(3) {
         margin-top: 0;
         transform: rotate(135deg);
       }
-
-      ;
     }
-
-    ;
   }
-
-  ;
 }
 
 .nav_menu {
@@ -141,10 +116,5 @@ header {
       background: $primary_color-dark;
       color: $primary_color-tint;
     }
-
-    ;
   }
-
-  ;
-
 }

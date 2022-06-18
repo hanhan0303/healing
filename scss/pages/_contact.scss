@@ -1,0 +1,124 @@
+.contact {
+  &__banner {
+    @include flex-center;
+    height: 484px;
+    background: url(/images/contact-banner.jpg) no-repeat center/cover;
+
+    @include pad {
+      height: 370px;
+    }
+
+    @include mobile {
+      height: 257px;
+    }
+
+    img {
+      transform: translateY(25%);
+
+      @include pad {
+        width: 330px;
+        transform: translateY(35%);
+      }
+
+      @include mobile {
+        width: 230px;
+        transform: translateY(50%);
+      }
+    }
+  }
+
+  &__information {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 94px;
+    padding-bottom: 150px;
+
+    @include pc-1080 {
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 64px;
+      padding-bottom: 96px;
+    }
+
+    @include mobile {
+      padding-top: 32px;
+      padding-bottom: 64px;
+    }
+
+    &__text {
+
+      @include pc-1080 {
+        margin-bottom: 64px;
+      }
+
+      @include pad {
+        width: 85vw;
+      }
+
+      h3 {
+        @include font_size_500L-text;
+
+        @include mobile {
+          @include font_size_500M-text;
+        }
+      }
+
+      p {
+        @include font_size_400S-text;
+        margin: 24px 0;
+
+        @include mobile {
+          @include font_size_400XS-text;
+        }
+      }
+
+      &__items {
+        a {
+          @include font_size_400S-text;
+          display: block;
+          cursor: pointer;
+
+          @include mobile {
+            @include font_size_400XS-text;
+          }
+
+          &:hover {
+            text-shadow: 0 0 2px $grayscale-default;
+          }
+        }
+
+        p {
+          margin: 0;
+        }
+
+        img {
+          transform: translateY(25%);
+          margin-right: 5px;
+          width: 36px;
+
+          @include mobile {
+            width: 24px;
+          }
+        }
+      }
+
+    }
+
+    &__map {
+      iframe {
+        width: 38vw;
+        height: 346px;
+
+        @include pc-1080 {
+          width: 70vw;
+        }
+
+        @include pad {
+          width: 85vw;
+          height: 300px;
+        }
+      }
+    }
+  }
+}

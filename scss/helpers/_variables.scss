@@ -14,11 +14,12 @@ $about_us_width: 61.46vw;
 /*index首頁-products-item的區塊*/
 $products_item_width: 21.6vw;
 $products_item_width_pc: 38vw;
-$products_item_width_pad: 43.75vw;
+$products_item_width_pad: 43.72vw;
 $products_item_width_mobile: 77.3vw;
 $products_img_border: 1px;
 $products_item_grid: calc((99vw - (#{$products_item_width} * 3) - (#{$products_img_border} * 6)) / 4);
 $products_item_grid_pc:calc((99vw - (#{$products_item_width_pc} * 2) - (#{$products_img_border} * 4)) / 3);
+$products_item_grid_pad:calc((99vw - (#{$products_item_width_pad} * 2) - (#{$products_img_border} * 4)) / 3);
 $products_item_grid_mobile: calc((99vw - #{$products_item_width_mobile} - (#{$products_img_border} * 2)) / 2);
 $products_item_text-margin: 16px;
 
@@ -26,12 +27,18 @@ $products_item_text-margin: 16px;
 $feedback_padding_r:7.56vw;
 $feedback_padding_pc: 5.6vw;
 $feedback_padding_pad: 5.6vw;
+$feedback_padding_mobile: 10vw;
 $feedback_item_margin_l: 2.6vw;
 $feedback_item_width: 195px;
+$feedback_item_width_mobile: 130px;
 $feedback_all-items_width: 57vw;
-$feedback_all-items_width_pc: 90vw;
+$feedback_all-items_width_pc: 88.68vw;
+$feedback_all-items_width_mobile: 79vw;
 $feedback_content_pcshow_width: 32.8vw;
 
-$feedback_item_grid: calc((99vw - ((#{$feedback_item_width} * 4) + #{$feedback_padding_r} + #{$feedback_item_margin_l} + #{$feedback_content_pcshow_width})) / 3);
-$feedback_item_grid_pc: calc((99vw - (#{$feedback_item_width} * 4) - (#{$feedback_padding_pc}*2)) / 3);
-$feedback_item_grid_pad: calc((99vw - (#{$feedback_item_width} * 3) - (#{$feedback_padding_pad}*2)) / 2);
+
+// $feedback_item_grid: calc((99vw - ((#{$feedback_item_width} * 4) + #{$feedback_padding_r} + #{$feedback_item_margin_l} + #{$feedback_content_pcshow_width})) / 3);
+// $feedback_item_grid_pc: calc((99vw - (#{$feedback_item_width} * 4) - (#{$feedback_padding_pc}*2)) / 3);
+// $feedback_item_grid_pc1080:calc((99vw - (#{$feedback_item_width} * 3) - (#{$feedback_padding_pc}*2)) / 2);
+// $feedback_item_grid_pad: calc((99vw - (#{$feedback_item_width} * 3)) / 4);
+// $feedback_item_grid_mobile:calc((99vw - (#{$feedback_item_width_mobile} * 2)) / 3);

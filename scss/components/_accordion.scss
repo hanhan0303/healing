@@ -1,24 +1,19 @@
 /*原本想用jQuery實現，但研究了一下發現可以用Pure CSS來做，也可以優化一些效能*/
 .qa {
   list-style: none;
-  border: 1px solid #a86c46;
-  width: 70%;
-  margin: 0 auto;
+  border: 2px solid #a86c46;
   background: #a86c46;
 
   &>li {
     position: relative;
-    font-size: 16px;
 
     &>label {
+      @include font_size_700-XS;
       display: flex;
       justify-content: space-between;
       align-items: center;
       user-select: none;
       padding: 25px 15px;
-      color: #fff7f0;
-      font-weight: bold;
-      line-height: 1.4;
     }
 
     ;
@@ -49,9 +44,8 @@
 }
 
 .answer {
+  @include font_size_400XS-text;
   display: none;
-  line-height: 1.4;
-  color: #584024;
   padding: 25px 15px;
   background: #ffffff;
 }
