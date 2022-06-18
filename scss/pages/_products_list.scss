@@ -1,0 +1,14 @@
+.products-list {
+  &__nav {
+    width: 243px;
+    border-radius: 10px;
+
+    a {
+      justify-content: center;
+
+      div {
+        margin-right: 10px;
+      }
+    }
+  }
+}
