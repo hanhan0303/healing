@@ -3,28 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <title>心靈療癒所</title>
-    <link rel="shortcut icon" href="images/favicon.ico" />
-    <meta name="keywords" content="療癒,heal,放鬆" />
+    <link href="images/favicon.ico" rel="shortcut icon" />
+    <meta content="療癒,heal,放鬆" name="keywords" />
+
     <meta
-      name="description"
       content="讓療癒回歸於自我本質，將身心靈的療癒體驗融入至生活中，並為忙碌的日常，找回自在的放鬆時刻。"
+      name="description"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <!-- <meta property="og:title" content="心靈療癒所" />
     <meta property="og:description" content="讓療癒回歸於自我本質，將身心靈的療癒體驗融入至生活中，並為忙碌的日常，找回自在的放鬆時刻。" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="FB上顯示的網址" />
     <meta property="og:image" content="FB上顯示的圖片" /> -->
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="css/main.css" />
+    <link href="libs/slick/slick.css" rel="stylesheet" />
+    <link href="libs/slick/slick-theme.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
   </head>
   <body>
     <div class="wrap">
@@ -40,33 +43,33 @@
             </div>
             <ul class="nav_menu nav">
               <li>
-                <a href="products_list.html"
-                  ><div class="nav_menu-home">
-                    <img src="/images/頁面icon/nav-home.svg" />
+                <a href="products_list.html">
+                  <div class="nav_menu-home">
+                    <img src="/images/icons/nav-home.svg" />
                   </div>
                   首頁</a
                 >
               </li>
               <li>
-                <a href="products_list.html"
-                  ><div class="nav_menu-products">
-                    <img src="/images/頁面icon/side-menu-lesson.svg" />
+                <a href="products_list.html">
+                  <div class="nav_menu-products">
+                    <img src="/images/icons/side-menu-lesson.svg" />
                   </div>
                   所有課程</a
                 >
               </li>
               <li>
-                <a href="faq.html"
-                  ><div class="nav_menu-qa">
-                    <img src="/images/頁面icon/nav-question.svg" />
+                <a href="faq.html">
+                  <div class="nav_menu-qa">
+                    <img src="/images/icons/nav-question.svg" />
                   </div>
                   常見問題</a
                 >
               </li>
               <li>
-                <a href="contact.html"
-                  ><div class="nav_menu-contact">
-                    <img src="/images/頁面icon/nav-service.svg" />
+                <a href="contact.html">
+                  <div class="nav_menu-contact">
+                    <img src="/images/icons/nav-service.svg" />
                   </div>
                   聯絡我們</a
                 >
@@ -91,10 +94,10 @@
               精選日常中的美好事物，數小時到一日的體驗活動，省下上網搜尋、爬文的寶貴時間，安排好假期，出發前線上預約，即可展開美好一趟美好體驗旅程！
             </p>
             <div class="about_img">
-              <img src="images/logo-02-white.png" alt="心靈療癒所logo" />
+              <img alt="心靈療癒所logo" src="images/logo-02-white.png" />
             </div>
             <div class="about_logo">
-              <img src="images/Free your mind!.svg" alt="Free your mind" />
+              <img alt="Free your mind" src="images/Free your mind!.svg" />
             </div>
           </div>
         </div>
@@ -103,138 +106,149 @@
           <p>
             走進森林或海景，精心安排的「瑜伽｜冥想｜山居探索｜森林療癒」旅程，享受迷人的舒心體驗。
           </p>
-          <div class="products_btn">
-            <div><img src="images/頁面icon/left.svg" /></div>
-            <div><img src="images/頁面icon/right.svg" /></div>
+          <div class="card-slider">
+            <div class="card-slider-nav">
+              <div class="card-slider__nav-prev">
+                <img src="images/icons/left.svg" />
+              </div>
+              <div class="card-slider__nav-next">
+                <img src="images/icons/right.svg" />
+              </div>
+            </div>
+            <ul class="card-slider__slides">
+              <li class="card-slider__slide">
+                <div class="card-slider__slide-image">
+                  <img src="images/home-product01.jpg" />
+                </div>
+                <h4>森林裡的瑜伽教室｜薰衣草森林一日遊</h4>
+                <p>
+                  【夏季精選】走進充滿正面氣息、無邊際的自然場域，讓森林凝聚我們的專注力、流動停滯的情感，在每一次的吸吐間重新認識自己，讓心靜下來、令森林引你前行。
+                </p>
+                <a class="a_buttons-md" href="products_travel01.html"
+                  >瞭解更多</a
+                >
+              </li>
+              <li class="card-slider__slide">
+                <div class="card-slider__slide-image">
+                  <img src="images/home-product02.jpg" />
+                </div>
+                <h4>心靈療癒所｜願望成真冥想課程</h4>
+                <p>
+                  【冥想系列】你有發現2022年特別不一樣嗎？你是否已經設定好，今年的目標呢？你準備好全力啟動去實現心願嗎？
+                </p>
+                <a class="a_buttons-md" href="products_meditation01.html"
+                  >瞭解更多</a
+                >
+              </li>
+              <li class="card-slider__slide">
+                <div class="card-slider__slide-image">
+                  <img src="images/home-product03.jpg" />
+                </div>
+                <h4>巴庫拉斯山居秘境｜南投二日遊</h4>
+                <p>
+                  【夏季精選】走進山林，在撫慰人心的山河風光下來一場樸實動人的山居之旅：讓本質帶領你拜訪隱居山林的現代神農氏，在豐富的故事解說中，認識藥草與野生植物。
+                </p>
+                <a class="a_buttons-md" href="products_travel02.html"
+                  >瞭解更多</a
+                >
+              </li>
+              <li class="card-slider__slide">
+                <div class="card-slider__slide-image">
+                  <img src="images/home-product04.png" />
+                </div>
+                <h4>陶憩日常，尋覓美好｜金瓜石二日遊</h4>
+                <p>
+                  【陶藝溫度】緩慢行走於礦城裡的幽深小徑，關掉手機、圍上圍裙，在自然的場域中，以五感汲取源源不絕的創作靈感，掘起山林裡的溫潤土壤，在緩慢形塑食物器皿的過程中，實踐細膩慢活的美感生活。
+                </p>
+                <a class="a_buttons-md" href="products_travel03.html"
+                  >瞭解更多</a
+                >
+              </li>
+            </ul>
           </div>
-          <ul>
-            <li>
-              <div class="product-img">
-                <img src="images/home-product01.jpg" />
-              </div>
-              <h4>森林裡的瑜伽教室｜薰衣草森林一日遊</h4>
-              <p>
-                【夏季精選】走進充滿正面氣息、無邊際的自然場域，讓森林凝聚我們的專注力、流動停滯的情感，在每一次的吸吐間重新認識自己，讓心靜下來、令森林引你前行。
-              </p>
-              <a class="a_buttons-md" href="products_travel01.html">瞭解更多</a>
-            </li>
-            <li>
-              <div class="product-img">
-                <img src="images/home-product02.jpg" />
-              </div>
-              <h4>心靈療癒所｜願望成真冥想課程</h4>
-              <p>
-                【冥想系列】你有發現2022年特別不一樣嗎？你是否已經設定好，今年的目標呢？你準備好全力啟動去實現心願嗎？
-              </p>
-              <a class="a_buttons-md" href="products_meditation01.html"
-                >瞭解更多</a
-              >
-            </li>
-            <li>
-              <div class="product-img">
-                <img src="images/home-product03.jpg" />
-              </div>
-              <h4>巴庫拉斯山居秘境｜南投二日遊</h4>
-              <p>
-                【夏季精選】走進山林，在撫慰人心的山河風光下來一場樸實動人的山居之旅：讓本質帶領你拜訪隱居山林的現代神農氏，在豐富的故事解說中，認識藥草與野生植物。
-              </p>
-              <a class="a_buttons-md" href="products_travel02.html">瞭解更多</a>
-            </li>
-            <li>
-              <div class="product-img">
-                <img src="images/home-product04.png" />
-              </div>
-              <h4>陶憩日常，尋覓美好｜金瓜石二日遊</h4>
-              <p>
-                【陶藝溫度】緩慢行走於礦城裡的幽深小徑，關掉手機、圍上圍裙，在自然的場域中，以五感汲取源源不絕的創作靈感，掘起山林裡的溫潤土壤，在緩慢形塑食物器皿的過程中，實踐細膩慢活的美感生活。
-              </p>
-              <a class="a_buttons-md" href="products_travel03.html">瞭解更多</a>
-            </li>
-          </ul>
         </div>
         <div class="feedback">
-          <div class="pc_hide">
+          <div class="feedback__title">
             <h3>顧客回饋</h3>
             <p>帶給你最舒心的活動體驗，與您一同分享。</p>
           </div>
-          <div class="feedback_btn">
-            <div><img src="images/頁面icon/left.svg" /></div>
-            <div><img src="images/頁面icon/right.svg" /></div>
-          </div>
-          <div class="feedback_content">
-            <div class="pc_show">
-              <h3>顧客回饋</h3>
-              <p>帶給你最舒心的活動體驗，與您一同分享。</p>
-              <div class="pc_show_logo">
-                <img src="images/logo-02-white.png" alt="background_白logo" />
+          <div class="feedback__card-slider">
+            <div class="card-slider-nav">
+              <div class="card-slider__nav-prev">
+                <img src="images/icons/left.svg" />
+              </div>
+              <div class="card-slider__nav-next">
+                <img src="images/icons/right.svg" />
               </div>
             </div>
-            <ul class="feedback_items">
-              <li>
-                <div>
-                  <img src="images/home-p01.png" alt="顧客大頭照01" />
-                </div>
-                <h4>Lily Chen</h4>
-                <div class="star-icon">
-                  <i class="fa-solid fa-star"></i><span>4.8</span>
-                </div>
-                <p>優良體驗！活動順暢也有放鬆心靈。</p>
-              </li>
-              <li>
-                <div>
-                  <img src="images/home-p02.png" alt="顧客大頭照02" />
-                </div>
-                <h4>Sandy Lin</h4>
-                <div class="star-icon">
-                  <i class="fa-solid fa-star"></i><span>5.0</span>
-                </div>
-                <p>很適合和姊妹們一起出遊的旅程規劃！</p>
-              </li>
-              <li>
-                <div>
-                  <img src="images/home-p03.png" alt="顧客大頭照03" />
-                </div>
-                <h4>Peter Su</h4>
-                <div class="star-icon">
-                  <i class="fa-solid fa-star"></i><span>4.7</span>
-                </div>
-                <p>旅程中帶給家人滿滿的美好回憶，很棒。</p>
-              </li>
-              <li>
-                <div>
-                  <img src="images/home-p04.png" alt="顧客大頭照04" />
-                </div>
-                <h4>Amy Chu</h4>
-                <div class="star-icon">
-                  <i class="fa-solid fa-star"></i><span>4.5</span>
-                </div>
-                <p>到山林裡真的有感到放鬆、紓壓。</p>
-              </li>
-              <li>
-                <div>
-                  <img src="images/home-p05.png" alt="顧客大頭照05" />
-                </div>
-                <h4>William Yang</h4>
-                <div class="star-icon">
-                  <i class="fa-solid fa-star"></i><span>5.0</span>
-                </div>
-                <p>
-                  很舒服的場地，風景超棒，木質地板與牆面很療癒，而且師資超強的！
-                </p>
-              </li>
-              <li>
-                <div>
-                  <img src="images/home-p06.png" alt="顧客大頭照06" />
-                </div>
-                <h4>Olivia Lai</h4>
-                <div class="star-icon">
-                  <i class="fa-solid fa-star"></i><span>4.6</span>
-                </div>
-                <p>
-                  喜歡這裡的能量氛圍！上完願望成真課程，顯化力量更快，夢想成真。
-                </p>
-              </li>
-            </ul>
+            <div class="card-slider">
+              <ul class="card-slider__slides">
+                <li class="card-slider__slide">
+                  <div>
+                    <img alt="顧客大頭照01" src="images/home-p01.png" />
+                  </div>
+                  <h4>Lily Chen</h4>
+                  <div class="star-icon">
+                    <i class="fa-solid fa-star"></i><span>4.8</span>
+                  </div>
+                  <p>優良體驗！活動順暢也有放鬆心靈。</p>
+                </li>
+                <li class="card-slider__slide">
+                  <div>
+                    <img alt="顧客大頭照02" src="images/home-p02.png" />
+                  </div>
+                  <h4>Sandy Lin</h4>
+                  <div class="star-icon">
+                    <i class="fa-solid fa-star"></i><span>5.0</span>
+                  </div>
+                  <p>很適合和姊妹們一起出遊的旅程規劃！</p>
+                </li>
+                <li class="card-slider__slide">
+                  <div>
+                    <img alt="顧客大頭照03" src="images/home-p03.png" />
+                  </div>
+                  <h4>Peter Su</h4>
+                  <div class="star-icon">
+                    <i class="fa-solid fa-star"></i><span>4.7</span>
+                  </div>
+                  <p>旅程中帶給家人滿滿的美好回憶，很棒。</p>
+                </li>
+                <li class="card-slider__slide">
+                  <div>
+                    <img alt="顧客大頭照04" src="images/home-p04.png" />
+                  </div>
+                  <h4>Amy Chu</h4>
+                  <div class="star-icon">
+                    <i class="fa-solid fa-star"></i><span>4.5</span>
+                  </div>
+                  <p>到山林裡真的有感到放鬆、紓壓。</p>
+                </li>
+                <li class="card-slider__slide">
+                  <div>
+                    <img alt="顧客大頭照05" src="images/home-p05.png" />
+                  </div>
+                  <h4>William Yang</h4>
+                  <div class="star-icon">
+                    <i class="fa-solid fa-star"></i><span>5.0</span>
+                  </div>
+                  <p>
+                    很舒服的場地，風景超棒，木質地板與牆面很療癒，而且師資超強的！
+                  </p>
+                </li>
+                <li class="card-slider__slide">
+                  <div>
+                    <img alt="顧客大頭照06" src="images/home-p06.png" />
+                  </div>
+                  <h4>Olivia Lai</h4>
+                  <div class="star-icon">
+                    <i class="fa-solid fa-star"></i><span>4.6</span>
+                  </div>
+                  <p>
+                    喜歡這裡的能量氛圍！上完願望成真課程，顯化力量更快，夢想成真。
+                  </p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <i class="fa-solid fa-circle-chevron-up go-top"></i>
@@ -243,8 +257,8 @@
         <div class="footer__content">
           <div class="footer__content__text">
             <img
-              src="images/頁面icon/心靈療癒所favicon-brown.svg"
               alt="心靈療癒所logo"
+              src="images/icons/心靈療癒所favicon-brown.svg"
             />
             <p class="footer__content__text__1650-hide">
               讓心靈療癒所陪伴您，找回最初從容的自己。<br />放慢步調、細細體會與品味生活。
@@ -263,13 +277,13 @@
             <a
               href="https://www.facebook.com/MeditionHealingSpace/about"
               target="_blank"
-              ><img src="images/頁面icon/footer-facebook.svg" alt="facebook"
+              ><img alt="facebook" src="images/icons/footer-facebook.svg"
             /></a>
             <a href="https://page.line.me/frk6049t" target="_blank"
-              ><img src="images/頁面icon/footer-line.svg" alt="line"
+              ><img alt="line" src="images/icons/footer-line.svg"
             /></a>
             <a href="https://www.instagram.com/ccrt.777/" target="_blank"
-              ><img src="images/頁面icon/footer-instagram.svg" alt="instagram"
+              ><img alt="instagram" src="images/icons/footer-instagram.svg"
             /></a>
           </div>
           <p>© 2022 心靈療癒所 All rights Reserved.</p>
@@ -277,10 +291,13 @@
       </footer>
     </div>
     <script
-      src="https://kit.fontawesome.com/e4bfe886c9.js"
       crossorigin="anonymous"
+      src="https://kit.fontawesome.com/e4bfe886c9.js"
     ></script>
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="libs/slick/slick.min.js"></script>
     <script src="js/all.js"></script>
+    <script src="js/shared.js"></script>
+    <script src="js/index-page.js"></script>
   </body>
 </html>

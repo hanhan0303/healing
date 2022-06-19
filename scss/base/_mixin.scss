@@ -80,31 +80,31 @@
 /*字體大小設定end*/
 /*RWD設定-media*/
 @mixin pc-1650 {
-  @media(max-width:1650px) {
+  @media(max-width: $breakpoint-pc-1650) {
     @content;
   }
 }
 
 @mixin pc {
-  @media(max-width:1280px) {
+  @media(max-width: $breakpoint-pc) {
     @content;
   }
 }
 
 @mixin pc-1080 {
-  @media(max-width:1080px) {
+  @media(max-width: $breakpoint-pc-1080) {
     @content;
   }
 }
 
 @mixin pad {
-  @media(max-width:768px) {
+  @media(max-width: $breakpoint-pad) {
     @content;
   }
 }
 
 @mixin mobile {
-  @media(max-width:414px) {
+  @media(max-width: $breakpoint-mobile) {
     @content;
   }
 }

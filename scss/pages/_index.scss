@@ -19,8 +19,6 @@
       right: 16.6vw;
     }
 
-
-
     @include pad {
       @include font_size_400L-text;
       color: $grayscale-tint;
@@ -28,15 +26,11 @@
       right: 12.3vw;
     }
 
-
-
     @include mobile {
       @include font_size_400M;
       top: 132px;
       right: 43px;
     }
-
-
   }
 }
 
@@ -72,13 +66,9 @@
       border-radius: 0;
     }
 
-
-
     @include mobile {
       width: 80.7vw;
     }
-
-
 
     h3 {
       @include font_size_500L-text;
@@ -88,11 +78,7 @@
         @include font_size_500M-text;
         margin-bottom: 15px;
       }
-
-
     }
-
-
 
     p {
       @include font_size_400S-text;
@@ -100,20 +86,16 @@
       @include mobile {
         @include font_size_400XS-text;
       }
-
-
     }
-
-
   }
 
   &_img {
     @include flex-center;
     position: absolute;
-    right: $about_us_width*0.8246;
+    right: $about_us_width * 0.8246;
     /*因應rwd依us的區塊大小變更位置->img/us=0.8246*/
     top: -106px;
-    width: $about_us_width*0.3509;
+    width: $about_us_width * 0.3509;
     /*因應rwd依us的區塊大小變更->img/us=0.3509*/
     min-width: 240px;
     height: 315px;
@@ -127,15 +109,11 @@
       margin-top: 56px;
     }
 
-
-
     @include mobile {
       width: 80.7vw;
       height: 222px;
       margin-top: 32px;
     }
-
-
 
     img {
       width: 150px;
@@ -143,20 +121,14 @@
 
       @include pad {
         width: 200px;
-        height: 260px
+        height: 260px;
       }
-
-
 
       @include mobile {
         width: 120px;
         height: 157px;
       }
-
-
     }
-
-
   }
 
   &_logo {
@@ -167,10 +139,7 @@
     @include pad {
       display: none;
     }
-
-
   }
-
 }
 
 .products {
@@ -189,7 +158,6 @@
     padding-bottom: 83px;
     padding-left: $products_item_grid_pad;
     padding-right: $products_item_grid_pad;
-
   }
 
   @include mobile {
@@ -216,150 +184,97 @@
     }
   }
 
-  &_btn {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 20px;
+  /* 針對 products 裡面的 card-slider 的客製化 */
+  .card-slider {
+    .slick-list {
+      margin: 0 -26px;
 
-    div {
-      width: 50px;
-      height: 50px;
-      margin-left: 20px;
-      cursor: pointer;
-
-      @include mobile {
-        width: 36px;
-        height: 36px;
-        margin-left: 12px;
+      .slick-slide {
+        margin: 0 26px;
       }
-
-
     }
 
+    @include pad {
+      .slick-list {
+        margin: 0 -13px;
 
-
-  }
-
-  ul {
-    @include flex-nowrap;
-
-    li {
-      @include flex-center;
-      flex-direction: column;
-      margin-right: $products_item_grid;
-      width: $products_item_width;
-
-
-      @include pc {
-        width: $products_item_width_pc;
-        margin-right: $products_item_grid_pc;
-      }
-
-
-      @include pad {
-        width: $products_item_width_pad;
-        margin-right: $products_item_grid_pad;
-      }
-
-
-
-      @include mobile {
-        width: $products_item_width_mobile;
-        margin-right: $products_item_grid_mobile;
-      }
-
-
-
-
-
-      h4 {
-        @include font_size_500M-text;
-        display: inline-block;
-        white-space: nowrap;
-        width: 100%;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        align-self: flex-start;
-
-        @include pc {
-          width: $products_item_width_pc;
+        .slick-slide {
+          margin: 0 13px;
         }
-
-
-
-        @include pad {
-          width: $products_item_width_pad;
-        }
-
-
-
-        @include mobile {
-          width: $products_item_width_mobile;
-        }
-
-
       }
-
-
-
-      p {
-        @include font_size_400XS-text;
-        height: 46px;
-        width: 100%;
-        white-space: normal;
-        word-wrap: break-word;
-        overflow: hidden;
-        margin-top: $products_item_text-margin;
-      }
-
-
-
-      a {
-        margin-top: $products_item_text-margin;
-      }
-
-
     }
 
+    & > .card-slider__slides {
+      @include flex-nowrap;
 
-  }
+      li {
+        text-align: center;
 
-}
+        h4 {
+          @include font_size_500M-text;
+          display: inline-block;
+          white-space: nowrap;
+          width: 100%;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          align-self: flex-start;
+          margin-top: $products_item_text-margin;
+        }
 
-.product-img {
-  width: $products_item_width;
-  margin-bottom: $products_item_text-margin;
+        p {
+          @include font_size_400XS-text;
+          height: 46px;
+          width: 100%;
+          white-space: normal;
+          word-wrap: break-word;
+          overflow: hidden;
+          margin-top: $products_item_text-margin;
+        }
 
-  @include pc {
-    width: $products_item_width_pc;
-  }
+        a {
+          margin-top: $products_item_text-margin;
+        }
+      }
 
-  @include pad {
-    width: $products_item_width_pad;
-  }
+      .card-slider__slide {
+        margin-bottom: $products_item_text-margin;
 
-  @include mobile {
-    width: $products_item_width_mobile;
-  }
+        //@include pc {
+        //  width: $products_item_width_pc;
+        //}
+        //
+        //@include pad {
+        //  width: $products_item_width_pad;
+        //}
+        //
+        //@include mobile {
+        //  width: $products_item_width_mobile;
+        //}
 
-  img {
-    border-radius: 20px;
-    border-width: $products_img_border;
-    border-style: solid;
-    border-color: $primary_color-dark;
+        img {
+          border-radius: 20px;
+          border-width: $products_img_border;
+          border-style: solid;
+          border-color: $primary_color-dark;
+        }
+      }
+    }
   }
 }
 
 .feedback {
+  display: flex;
   padding-top: 153px;
   padding-right: $feedback_padding_r;
   padding-bottom: 163px;
+  flex-direction: row;
 
   @include pc {
     padding-top: 55px;
     padding-bottom: 100px;
     padding-left: $feedback_padding_pc;
     padding-right: $feedback_padding_pc;
+    flex-direction: column;
   }
 
   @include pad {
@@ -376,169 +291,104 @@
     padding-right: $feedback_padding_mobile;
   }
 
-  &_btn {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 20px;
-
-    div {
-      width: 50px;
-      height: 50px;
-      margin-left: 20px;
-      cursor: pointer;
-
-      @include mobile {
-        width: 36px;
-        height: 36px;
-        margin-left: 12px;
-      }
-
-
-    }
-
-
-  }
-
-  &_content {
-    display: flex;
-    align-items: center;
-  }
-
-  &_items {
-    @include flex-nowrap;
-    margin-left: $feedback_item_margin_l;
-    width: $feedback_all-items_width;
-
-    @include pc {
-      width: $feedback_all-items_width_pc;
-      margin-left: 0;
-    }
-
-    @include mobile {
-      width: $feedback_all-items_width_mobile;
-    }
-
-
-
-    li {
-      @include flex-center;
-      flex-direction: column;
-      margin-right: 5%;
-      width: $feedback_item_width;
-
-      div {
-        width: $feedback_item_width;
-      }
-
-
-
-      h4 {
-        @include font_size_500M-text;
-        margin-top: 9px;
-      }
-
-
-
-      div.star-icon {
-        margin: 6px 0;
-        color: $primary_color-default;
-        font-size: 24px;
-        text-align: center;
-
-        span {
-          @include font_size_400S-text;
-          margin-left: 5px;
-        }
-
-
-      }
-
-
-
-      p {
-        @include font_size_400XS-text;
-        height: 46px;
-        width: 100%;
-        white-space: normal;
-        word-wrap: break-word;
-        overflow: hidden;
-      }
-
-
-
-    }
-
-
-  }
-}
-
-.pc {
-  &_hide {
-    display: none;
-
-    @include pc {
-      display: block;
-      text-align: center;
-
-      h3 {
-        @include font_size_500L-text
-      }
-
-
-
-      p {
-        @include font_size_400S-text;
-        margin-top: 24px;
-        margin-bottom: 17px
-      }
-
-
-    }
-
-
-  }
-
-  &_show {
+  .feedback__title {
     position: relative;
     width: $feedback_content_pcshow_width;
     height: 395px;
     border-radius: 0 20px 20px 0;
-    background-color: $primary_color-tint;
     padding: 137px 3.75vw 161px 8.86vw;
-    z-index: -10;
-
-    @include pc {
-      display: none;
-    }
-
-
+    background: url("/images/logo-02-white.png") no-repeat -100px 120px,
+      $primary_color-tint;
+    background-size: 340px;
+    align-self: flex-end;
 
     h3 {
-      @include font_size_500L-text
+      @include font_size_500L-text;
     }
-
-
 
     p {
       @include font_size_400S-text;
       margin-top: 24px;
     }
 
-
-
-    &_logo {
-      position: absolute;
-      top: 137px;
-      right: $feedback_content_pcshow_width*0.5754;
-      width: 340px;
-      z-index: -9;
+    @include pc {
+      width: 100%;
+      background: none;
+      align-self: center;
+      padding: 0;
+      height: inherit;
+      text-align: center;
     }
+  }
 
+  .feedback__card-slider {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2.6vw;
 
+    .card-slider {
+      height: 395px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      overflow: hidden;
+      justify-content: center;
+      .slick-list {
+        margin: 0 -26px;
+        .slick-slide {
+          margin: 0 26px;
+        }
+      }
+
+      .slick-slider {
+        @include pad {
+          .slick-list {
+            margin: 0 -13px;
+
+            .slick-slide {
+              margin: 0 13px;
+            }
+          }
+        }
+      }
+
+      .card-slider__slide {
+        @include flex-center;
+        flex-direction: column;
+
+        h4 {
+          @include font_size_500M-text;
+          margin-top: 9px;
+        }
+
+        div.star-icon {
+          margin: 6px 0;
+          color: $primary_color-default;
+          font-size: 24px;
+          text-align: center;
+
+          span {
+            @include font_size_400S-text;
+            margin-left: 5px;
+          }
+        }
+
+        p {
+          @include font_size_400XS-text;
+          height: 46px;
+          width: 100%;
+          white-space: normal;
+          word-wrap: break-word;
+          overflow: hidden;
+        }
+      }
+    }
   }
 }
 
-main>i.go-top {
+main > i.go-top {
   display: none;
   font-size: 50px;
   color: $text_color-dark;
