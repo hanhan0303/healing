@@ -1,3 +1,9 @@
+.product__banner {
+  @include bg-center;
+  background-image: url(/images/bg-banner02.jpg);
+  height: 484px;
+}
+
 .product__nav {
   display: flex;
   justify-content: space-between;

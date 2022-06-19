@@ -1392,6 +1392,14 @@ main > i.go-top {
   margin-top: 16px;
 }
 
+.product__banner {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(/images/bg-banner02.jpg);
+  height: 484px;
+}
+
 .product__nav {
   display: flex;
   justify-content: space-between;
