@@ -1,4 +1,18 @@
 // 課程列表 start
+const menuItems = {
+  all: {
+    text: '所有課程',
+  },
+  travel: {
+    text: '深度旅行',
+  },
+  yoga: {
+    text: '瑜珈課程',
+  },
+  meditation: {
+    text: '冥想課程',
+  },
+};
 
 //分類選單
 const $productCategoryMenuItems = $('ul.products-list__nav a');
@@ -12,15 +26,13 @@ const $categoryOfBreadcrumbs = $('.products__nav__breadcrumb p');
 $productCategoryMenuItems.on('click', function (e) {
   e.preventDefault();
   const category = $(this).data('category');
-  const text = $(this).text();
-  renderBreadcrumbs(text);
+  renderBreadcrumbs(category);
   renderProductList(category);
   $productCategorySelect.val(category);
 });
 
 $productCategorySelect.on('change', function (e) {
-  const text = e.target.options[e.target.selectedIndex].innerText;
-  renderBreadcrumbs(text);
+  renderBreadcrumbs(e.target.value);
   renderProductList(e.target.value, $productSortingSelect.val());
 });
 
@@ -29,8 +41,9 @@ $productSortingSelect.on('change', function (e) {
   renderProductList($productCategorySelect.val(), e.target.value);
 });
 
-function renderBreadcrumbs(category = '所有課程') {
-  $categoryOfBreadcrumbs.html(category);
+function renderBreadcrumbs(category = 'all') {
+  const text = menuItems[category].text;
+  $categoryOfBreadcrumbs.html(text);
 }
 
 function renderProductList(category = 'all', sorting = 'launch_time_desc') {
@@ -70,6 +83,15 @@ function renderProductList(category = 'all', sorting = 'launch_time_desc') {
   });
   $productList.empty().append($products);
 }
-renderProductList('all');
+
+const categoryFromURL = new URLSearchParams(window.location.search).get(
+  'category',
+);
+
+const defaultCategory = categoryFromURL || 'all';
+
+renderBreadcrumbs(defaultCategory);
+renderProductList(defaultCategory);
+$productCategorySelect.val(defaultCategory);
 
 // 課程列表 end
