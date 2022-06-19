@@ -34,7 +34,7 @@ function renderBreadcrumbs(category = '所有課程') {
 }
 
 function renderProductList(category = 'all', sorting = 'launch_time_desc') {
-  const $productList = $('ul.products-list__nav');
+  const $productList = $('ul.products-list__main');
   const filteredProducts = Products.filter(function (product) {
     return category === 'all' ? true : product.category === category;
   });
@@ -63,7 +63,7 @@ function renderProductList(category = 'all', sorting = 'launch_time_desc') {
 		<div>
 				<h3>${product.title}</h3>
 				<p>${product.description}</p>
-				<a href="${product.href}">瞭解更多</a>
+				<a class="a_buttons-md" href="${product.href}">瞭解更多</a>
 		</div>
 </li>
 `);
