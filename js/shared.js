@@ -1,4 +1,12 @@
 // 全部產品
+const Breakpoints = {
+  'pc-1650': 1650,
+  'pc': 1280,
+  'pc-1080': 1080,
+  'pad': 768,
+  'mobile': 414,
+}
+
 const Products = [
   {
     id: 'travel-1',
