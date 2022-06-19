@@ -14,6 +14,10 @@
     user-select: none;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+    i {
+      opacity: 0;
+    }
+
     @include pc {
       top: 20.9vh;
       right: 16.6vw;

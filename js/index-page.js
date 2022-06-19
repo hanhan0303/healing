@@ -1,5 +1,14 @@
 $(document).ready(() => {
   /*
+   * FadeIn Text
+   * */
+  $("main .banner h2 i").each(function () {
+    setTimeout(() => {
+      $(this).animate({ opacity: 1 });
+    }, Math.floor(Math.random() * 1000));
+  });
+
+  /*
    * Products Slider
    * */
   const $productSlider = $(".products .card-slider .card-slider__slides");
