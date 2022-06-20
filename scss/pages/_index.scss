@@ -204,7 +204,7 @@
       }
     }
 
-    & > .card-slider__slides {
+    &>.card-slider__slides {
       @include flex-nowrap;
 
       li {
@@ -335,8 +335,10 @@
       width: 100%;
       overflow: hidden;
       justify-content: center;
+
       .slick-list {
         margin: 0 -26px;
+
         .slick-slide {
           margin: 0 26px;
         }
@@ -388,7 +390,7 @@
   }
 }
 
-main > i.go-top {
+main>i.go-top {
   display: none;
   font-size: 50px;
   color: $text_color-dark;
@@ -397,4 +399,12 @@ main > i.go-top {
   bottom: 10vh;
   cursor: pointer;
   z-index: 100;
+
+  @include pad {
+    font-size: 36px;
+  }
+
+  @include mobile {
+    font-size: 30px;
+  }
 }

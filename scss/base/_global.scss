@@ -37,6 +37,17 @@ img {
 .wrap {
   position: relative;
   max-width: 1920px;
+  min-width: 320px;
   margin: 0px auto;
   font-family: "Noto Sans TC", sans-serif;
+}
+
+hr {
+  background-color: #584024;
+  height: 1px;
+  border: none;
+}
+
+main {
+  margin-bottom: 50px;
 }
