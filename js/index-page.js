@@ -1,5 +1,44 @@
 $(document).ready(() => {
   /*
+   * FadeIn Text
+   * */
+  $("main .banner h2 i").each(function () {
+    setTimeout(() => {
+      $(this).animate({ opacity: 1 });
+    }, Math.floor(Math.random() * 1000));
+  });
+
+  /**
+   * Fade In About US
+   */
+
+  let observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          $(".about").animate(
+            { opacity: 1 },
+            {
+              duration: 1000,
+            }
+          );
+        } else {
+          $(".about").animate(
+            { opacity: 0 },
+            {
+              duration: 1000,
+            }
+          );
+        }
+      });
+    },
+    {
+      rootMargin: "-100px",
+    }
+  );
+  observer.observe($(".about_us").get(0));
+
+  /*
    * Products Slider
    * */
   const $productSlider = $(".products .card-slider .card-slider__slides");
