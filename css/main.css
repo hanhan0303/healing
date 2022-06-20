@@ -98,7 +98,6 @@ img {
 .wrap {
   position: relative;
   max-width: 1920px;
-  min-width: 320px;
   margin: 0px auto;
   font-family: "Noto Sans TC", sans-serif;
 }
@@ -1604,6 +1603,12 @@ main > i.go-top {
 }
 .product__main a {
   align-self: center;
+}
+
+.order-step {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .contact__banner {
