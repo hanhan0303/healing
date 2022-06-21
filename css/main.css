@@ -1030,6 +1030,7 @@ footer {
   white-space: normal;
   word-wrap: break-word;
   overflow: hidden;
+  text-align: center;
 }
 
 main > i.go-top {
