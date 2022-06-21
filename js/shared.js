@@ -1,11 +1,11 @@
 // 全部產品
 const Breakpoints = {
   'pc-1650': 1650,
-  'pc': 1280,
+  pc: 1280,
   'pc-1080': 1080,
-  'pad': 768,
-  'mobile': 414,
-}
+  pad: 768,
+  mobile: 414,
+};
 
 const Products = [
   {
@@ -25,6 +25,7 @@ const Products = [
       '/images/products/travel/01森林瑜珈/6.jpg',
     ],
     href: 'products_travel01.html',
+    price: 3700,
   },
   {
     id: 'travel-2',
@@ -40,6 +41,7 @@ const Products = [
       '/images/products/travel/02巴庫拉斯/3.jpg',
     ],
     href: 'products_travel02.html',
+    price: 6500,
   },
   {
     id: 'travel-3',
@@ -55,6 +57,7 @@ const Products = [
       '/images/products/travel/03陶憩日常/3.png',
     ],
     href: 'products_travel03.html',
+    price: 8900,
   },
   {
     id: 'travel-4',
@@ -72,6 +75,7 @@ const Products = [
       '/images/products/travel/04薰衣草森林/5.png',
     ],
     href: 'products_travel04.html',
+    price: 8900,
   },
   {
     id: 'meditation-1',
@@ -87,6 +91,7 @@ const Products = [
       '/images/products/meditation/01願望成真冥想/p-03.jpg',
     ],
     href: 'products_meditation01.html',
+    price: 880,
   },
   {
     id: 'meditation-2',
@@ -103,6 +108,7 @@ const Products = [
       '/images/products/meditation/02正念冥想/g-4.jpg',
     ],
     href: 'products_meditation02.html',
+    price: 3500,
   },
   {
     id: 'meditation-3',
@@ -119,6 +125,7 @@ const Products = [
       '/images/products/meditation/03減壓冥想/m-4.jpg',
     ],
     href: 'products_meditation03.html',
+    price: 2580,
   },
   {
     id: 'yoga-1',
@@ -137,6 +144,7 @@ const Products = [
       '/images/products/yoga/01療癒基礎/a-6.jpg',
     ],
     href: 'products_yoga01.html',
+    price: 440,
   },
   {
     id: 'yoga-2',
@@ -154,11 +162,12 @@ const Products = [
       '/images/products/yoga/02熱瑜珈/d-05.jpg',
     ],
     href: 'products_yoga02.html',
+    price: 500,
   },
   {
     id: 'yoga-3',
     category: 'yoga',
-    title: '心靈療癒所｜療癒瑜珈基礎',
+    title: '心靈療癒所｜療癒哈達',
     description:
       '【瑜珈系列】療癒哈達課程依不同「主題」設計相對應體位法，以功能性為主的練習序列，搭配輔具的運用，協助強化、促進身體機能。',
     views: 1120,
@@ -171,5 +180,6 @@ const Products = [
       '/images/products/yoga/03瑜珈哈達/e-5.jpg',
     ],
     href: 'products_yoga03.html',
+    price: 600,
   },
 ];
