@@ -1,7 +1,7 @@
 // 課程列表 start
 const menuItems = {
   all: {
-    text: '所有課程',
+    text: '所有商品',
   },
   travel: {
     text: '深度旅行',
