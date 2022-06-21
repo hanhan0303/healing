@@ -1997,6 +1997,11 @@ main > i.go-top {
 .order-check {
   margin-top: 0px;
 }
+@media (max-width: 768px) {
+  .order-check {
+    margin-bottom: 50px;
+  }
+}
 @media (max-width: 414px) {
   .order-check h4 {
     margin: 0 auto;
@@ -2017,9 +2022,34 @@ main > i.go-top {
   align-items: center;
   margin-bottom: 100px;
 }
+@media (max-width: 768px) {
+  .order-check__btn {
+    margin-bottom: 70px;
+  }
+}
+@media (max-width: 414px) {
+  .order-check__btn {
+    margin-bottom: 50px;
+  }
+}
 .order-check__btn a {
   margin-right: 70px;
   transform: translateX(35px);
+}
+@media (max-width: 768px) {
+  .order-check__btn a {
+    margin-right: 30px;
+    transform: translateX(15px);
+  }
+}
+@media (max-width: 414px) {
+  .order-check__btn a {
+    margin-right: 20px;
+    transform: translateX(10px);
+    height: 54px;
+    padding: 16px;
+    font-size: 16px;
+  }
 }
 
 .contact__banner {
