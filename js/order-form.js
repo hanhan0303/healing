@@ -5,6 +5,10 @@ $(document).ready(() => {
   const productID = new URLSearchParams(window.location.search).get(
     "product_id"
   );
+  const rawFormData = new URLSearchParams(window.location.search).get(
+    "formData"
+  );
+  const formData = rawFormData ? JSON.parse(rawFormData) : null;
 
   const product = Products.find((p) => p.id === productID);
 
@@ -15,11 +19,11 @@ $(document).ready(() => {
   const typeSetting = TypeSetting[product.category];
   const minAmount = 2;
 
-  const $productTable = $(`
+  const $orderTable = $(`
     <table>
       <thead>
         <tr>
-          <th><h4>訂單內容</h4></th>
+          <th><h4>商品</h4></th>
           <th></th>
           <th><h4>人數</h4></th>
           <th><h4>小計</h4></th>
@@ -63,26 +67,91 @@ $(document).ready(() => {
     </table>
   `);
 
-  const $totalSpan = $productTable.find("tfoot .total").first();
+  const $orderTableForMobile = $(`
+    <div class="order-content_1280show">
+      <div class="order-content_1280show__text">
+        <h3>訂單內容</h3>
+        <h4>商品</h4>
+        <img src="${product.images[0]}" />
+        <h5>${typeSetting.nameText}：${product.title}</h5>
+        <p>${typeSetting.dateTimeText}：${product.startTime}</p>
+      </div>
+      <table>
+        <tr>
+          <th>人數</th>
+          <th>小計</th>
+        </tr>
+        <tr>
+          <td>
+            <select name="people">
+              <option value="2">&thinsp;2</option>
+              <option value="3">&thinsp;3</option>
+              <option value="4">&thinsp;4</option>
+              <option value="5">&thinsp;5</option>
+              <option value="6">&thinsp;6</option>
+              <option value="7">&thinsp;7</option>
+              <option value="8">&thinsp;8</option>
+              <option value="9">&thinsp;9</option>
+              <option value="10">10</option>
+            </select>
+          </td>
+          <td><span>NT$ ${product.price}</span></td>
+        </tr>
+        <tfoot>
+          <tr>
+            <td><span>總計</span></td>
+            <td>NT$ <span class="total">${product.price * minAmount}</span></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  `);
 
-  $productTable
-    .find("select[name=people]")
-    .first()
-    .on("change", (e) => {
-      $totalSpan.html(e.target.value * product.price);
-    });
+  buildTableByWindowSize();
+  $(window).on("resize", buildTableByWindowSize);
 
-  $(".order-content").append($productTable);
+  function buildTableByWindowSize() {
+    if (window.innerWidth <= 768) {
+      mountOrderTable($orderTableForMobile);
+      $orderTable.remove();
+      $orderTableForMobile.insertAfter($(".order-content"));
+    } else {
+      mountOrderTable($orderTable);
+      $orderTableForMobile.remove();
+      $(".order-content").append($orderTable);
+    }
+  }
+
+  function mountOrderTable($table) {
+    const $totalSpan = $table.find("tfoot .total").first();
+    $table
+      .find("select[name=people]")
+      .first()
+      .on("change", (e) => {
+        $totalSpan.html(e.target.value * product.price);
+      });
+
+    if (formData && formData["people"]) {
+      const field = $table.find(`select[name=people]`);
+      field.val(formData["people"]).change();
+    }
+  }
 
   /**
    * Order Detail
    */
   const $form = $("form.order-form");
-  const $submitBtn = $("form.order-form input[type=submit]");
   const $customerPhoneField = $("input[name=customer_phone]");
   const $customerIDField = $("input[name=customer_id]");
   const $customerIDValidIcon = $(".customer-id .is-valid-id");
   const $customerReceiptField = $("input[name=customer_receipt]");
+
+  if (formData) {
+    Object.keys(formData).forEach((key) => {
+      const field = $form.find(`input[name=${key}]`);
+      field.val(formData[key]);
+    });
+  }
 
   // Validation
   $customerPhoneField.on("input", function () {

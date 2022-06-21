@@ -14,6 +14,11 @@ $(document).ready(() => {
   const typeSetting = TypeSetting[product.category];
 
   $orderCheck = $(".order-info.order-check");
+  $goBackButton = $(".go-back");
+  $goBackButton.attr(
+    "href",
+    `order_form.html?product_id=${formData.productID}&formData=${rawFormData}`
+  );
 
   const $checkTable = $(`
     <div class="order-info__apply">
@@ -21,7 +26,7 @@ $(document).ready(() => {
       <ul>
         <li>${typeSetting.nameText}：${product.title}</li>
         <li>${typeSetting.dateTimeText}：${product.startTime}</li>
-        <li>課程/遊程天數：1天</li>
+        <li>報名天數：${product.days}</li>
         <li>報名人數：${formData.people}</li>
       </ul>
       <hr />

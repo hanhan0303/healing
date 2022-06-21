@@ -2068,9 +2068,6 @@ main > i.go-top {
   color: #584024;
   margin-top: 30px;
 }
-.order-main article p:nth-of-type(1) {
-  list-style-type: disc;
-}
 
 .contact__banner {
   display: flex;
