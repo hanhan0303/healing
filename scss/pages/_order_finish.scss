@@ -3,16 +3,28 @@
   @include flex-center;
   flex-direction: column;
   color: rgb(123, 0, 0);
+  margin-bottom: 50px;
+
+  @include mobile {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
 
   &__text {
     @include flex-center;
     @include font_size_500L-text;
     position: relative;
     color: $text_color-dark;
+    font-size: 35px;
 
     h3 {
       margin-right: 16px;
       transform: translateY(-5px);
+
+      @include mobile {
+        font-size: 30px;
+        transform: translateY(0px);
+      }
     }
   }
 }
@@ -21,14 +33,30 @@
   article {
     border: 1px solid $text_color-dark;
     padding: 50px 72px;
+    margin-bottom: 150px;
+
+    @include pad {
+      padding: 50px;
+      margin-bottom: 100px;
+    }
+
+    @include mobile {
+      padding: 24px;
+      margin-bottom: 60px;
+    }
 
     h5 {
       @include font_size_400S-text;
     }
 
-    p {
-      @include font_size_400XS-text;
-      margin-top: 30px;
+    ul {
+      list-style: disc;
+      margin-left: 24px;
+
+      p {
+        @include font_size_400XS-text;
+        margin-top: 30px;
+      }
     }
   }
 }
