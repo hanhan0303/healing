@@ -295,14 +295,15 @@
       margin: 5px 0;
     }
 
-    div>div>div.customer-id {
+    div > div > div.customer-id {
       position: relative;
 
       input {
         width: 100%;
       }
 
-      i {
+      i.is-valid-id {
+        visibility: hidden;
         position: absolute;
         right: 16px;
         top: 25%;
@@ -310,9 +311,9 @@
         font-size: 24px;
       }
 
-      &+label::after {
-        content: '必填';
-        color: #AE1914;
+      & + label::after {
+        content: "必填";
+        color: #ae1914;
         font-size: 14px;
         cursor: default;
       }
@@ -351,7 +352,7 @@
       }
     }
 
-    div:last-of-type+p {
+    div:last-of-type + p {
       @include font_size_400S-text;
       margin-top: 25px;
     }

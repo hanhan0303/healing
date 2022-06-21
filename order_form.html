@@ -90,54 +90,9 @@
             完成訂購
           </div>
         </div>
-        <form>
+        <form class="order-form" action="order_check.html">
           <div class="order-content">
             <h3>行程資料確認</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th><h4>課程/遊程資料</h4></th>
-                  <th></th>
-                  <th><h4>人數</h4></th>
-                  <th><h4>總計</h4></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <img
-                      src="images/products/meditation/01願望成真冥想/p-01.jpg"
-                    />
-                  </td>
-                  <td>
-                    <h5>課程/遊程標題：願望成真冥想課程</h5>
-                    <p>課程/出發日期：2022/07/02(六)</p>
-                  </td>
-                  <td>
-                    <select name="people">
-                      <option value="2">&thinsp;2</option>
-                      <option value="3">&thinsp;3</option>
-                      <option value="4">&thinsp;4</option>
-                      <option value="5">&thinsp;5</option>
-                      <option value="6">&thinsp;6</option>
-                      <option value="7">&thinsp;7</option>
-                      <option value="8">&thinsp;8</option>
-                      <option value="9">&thinsp;9</option>
-                      <option value="10">10</option>
-                    </select>
-                  </td>
-                  <td><span>NT$1760</span></td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td><span>2</span></td>
-                  <td><span>NT$1760</span></td>
-                </tr>
-              </tfoot>
-            </table>
           </div>
           <div class="order-content_1280show">
             <div class="order-content_1280show__text">
@@ -208,7 +163,6 @@
                     type="tel"
                     placeholder="請輸入電話號碼"
                     onkeyup="this.value=this.value.replace(/\D/g,'')"
-                    onafterpaste="this.value=this.value.replace(/\D/g,'')"
                     required
                   />
                   <label for="customer_phone">電話 Phone Number</label>
@@ -220,11 +174,9 @@
                       name="customer_id"
                       type="text"
                       placeholder="請輸入身分證字號"
-                      onkeyup="value=value.replace(/[\W]/g,'') "
-                      onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"
                       required
                     />
-                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-check is-valid-id"></i>
                   </div>
                   <label for="customer_id">身分證 ID</label>
                 </div>
@@ -234,8 +186,6 @@
                     name="customer_receipt"
                     type="text"
                     placeholder="請輸入統編號碼"
-                    onkeyup="this.value=this.value.replace(/\D/g,'')"
-                    onafterpaste="this.value=this.value.replace(/\D/g,'')"
                   />
                   <label for="customer_receipt"
                     >開立統編收據(如無，則忽略欄位)</label
@@ -275,24 +225,24 @@
                 </div>
                 <div class="form_item">
                   <input
-                    id="account number"
-                    name="account number"
+                    id="account_number"
+                    name="account_number"
                     type="text"
                     placeholder="請輸入匯款帳戶"
                     onkeyup="this.value=this.value.replace(/\D/g,'')"
                     onafterpaste="this.value=this.value.replace(/\D/g,'')"
                     required
                   />
-                  <label for="account number">匯款帳戶</label>
+                  <label for="account_number">匯款帳戶</label>
                 </div>
                 <div class="form_item">
                   <input
-                    id="customer_note"
-                    name="customer_note"
+                    id="payment_customer_note"
+                    name="payment_customer_note"
                     type="text"
                     placeholder="請輸入備註及注意事項"
                   />
-                  <label for="customer_note">備註及注意事項</label>
+                  <label for="payment_customer_note">備註及注意事項</label>
                 </div>
               </div>
               <p>**匯款後將與您確認匯款後5碼</p>
@@ -329,5 +279,7 @@
     ></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/all.js"></script>
+    <script src="js/shared.js"></script>
+    <script src="js/order-form.js"></script>
   </body>
 </html>
