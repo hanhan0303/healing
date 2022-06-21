@@ -26,6 +26,7 @@ const Products = [
     ],
     href: 'products_travel01.html',
     price: 3700,
+    days: 2,
   },
   {
     id: 'travel-2',
@@ -42,6 +43,7 @@ const Products = [
     ],
     href: 'products_travel02.html',
     price: 6500,
+    days: 2,
   },
   {
     id: 'travel-3',
@@ -58,6 +60,7 @@ const Products = [
     ],
     href: 'products_travel03.html',
     price: 8900,
+    days: 2,
   },
   {
     id: 'travel-4',
@@ -76,6 +79,7 @@ const Products = [
     ],
     href: 'products_travel04.html',
     price: 8900,
+    days: 2,
   },
   {
     id: 'meditation-1',
@@ -92,6 +96,7 @@ const Products = [
     ],
     href: 'products_meditation01.html',
     price: 880,
+    days: 1,
   },
   {
     id: 'meditation-2',
@@ -109,6 +114,7 @@ const Products = [
     ],
     href: 'products_meditation02.html',
     price: 3500,
+    days: 1,
   },
   {
     id: 'meditation-3',
@@ -126,6 +132,7 @@ const Products = [
     ],
     href: 'products_meditation03.html',
     price: 2580,
+    days: 1,
   },
   {
     id: 'yoga-1',
@@ -145,6 +152,7 @@ const Products = [
     ],
     href: 'products_yoga01.html',
     price: 440,
+    days: 1,
   },
   {
     id: 'yoga-2',
@@ -163,6 +171,7 @@ const Products = [
     ],
     href: 'products_yoga02.html',
     price: 500,
+    days: 1,
   },
   {
     id: 'yoga-3',
@@ -181,5 +190,6 @@ const Products = [
     ],
     href: 'products_yoga03.html',
     price: 600,
+    days: 1,
   },
 ];
