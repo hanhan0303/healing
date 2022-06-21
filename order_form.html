@@ -75,58 +75,105 @@
           </nav>
         </div>
       </header>
-      <main>
+      <main class="order-main">
         <div class="order-step">
-          <div class="order-step-active">
-            <span>1</span>
-            <p>填寫資料</p>
+          <div class="order-step__item">
+            <div class="step-active">1</div>
+            填寫資料
           </div>
-          <div>
-            <span>2</span>
-            <p>訂單確認</p>
+          <div class="order-step__item">
+            <div>2</div>
+            訂單確認
           </div>
-          <div>
-            <span>3</span>
-            <p>完成訂購</p>
+          <div class="order-step__item">
+            <div>3</div>
+            完成訂購
           </div>
         </div>
         <form>
           <div class="order-content">
             <h3>行程資料確認</h3>
             <table>
+              <thead>
+                <tr>
+                  <th><h4>課程/遊程資料</h4></th>
+                  <th></th>
+                  <th><h4>人數</h4></th>
+                  <th><h4>總計</h4></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      src="images/products/meditation/01願望成真冥想/p-01.jpg"
+                    />
+                  </td>
+                  <td>
+                    <h5>課程/遊程標題：願望成真冥想課程</h5>
+                    <p>課程/出發日期：2022/07/02(六)</p>
+                  </td>
+                  <td>
+                    <select name="people">
+                      <option value="2">&thinsp;2</option>
+                      <option value="3">&thinsp;3</option>
+                      <option value="4">&thinsp;4</option>
+                      <option value="5">&thinsp;5</option>
+                      <option value="6">&thinsp;6</option>
+                      <option value="7">&thinsp;7</option>
+                      <option value="8">&thinsp;8</option>
+                      <option value="9">&thinsp;9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </td>
+                  <td><span>NT$1760</span></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td><span>2</span></td>
+                  <td><span>NT$1760</span></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <div class="order-content_1280show">
+            <div class="order-content_1280show__text">
+              <h3>行程資料確認</h3>
+              <h4>課程/遊程資料</h4>
+              <img src="images/products/meditation/01願望成真冥想/p-01.jpg" />
+              <h5>課程/遊程標題：願望成真冥想課程</h5>
+              <p>課程/出發日期：2022/07/02(六)</p>
+            </div>
+            <table>
               <tr>
-                <th><h4>課程/遊程資料</h4></th>
-                <th></th>
-                <th><h4>人數</h4></th>
-                <th><h4>總計</h4></th>
+                <th>人數</th>
+                <th>總計</th>
               </tr>
               <tr>
                 <td>
-                  <img
-                    src="images/products/meditation/01願望成真冥想/p-01.jpg"
-                  />
+                  <select name="people">
+                    <option value="2">&thinsp;2</option>
+                    <option value="3">&thinsp;3</option>
+                    <option value="4">&thinsp;4</option>
+                    <option value="5">&thinsp;5</option>
+                    <option value="6">&thinsp;6</option>
+                    <option value="7">&thinsp;7</option>
+                    <option value="8">&thinsp;8</option>
+                    <option value="9">&thinsp;9</option>
+                    <option value="10">10</option>
+                  </select>
                 </td>
-                <td>
-                  <h5>課程/遊程標題：願望成真冥想課程</h5>
-                  <p>課程/出發日期：2022/07/02(六)</p>
-                </td>
-                <td>
-                  <input
-                    type="number"
-                    id="people_number"
-                    name="people_number"
-                    min="2"
-                    max="10"
-                  />>
-                </td>
-                <td><span>NT$2400</span></td>
+                <td>NT$1760</td>
               </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td><span>1</span></td>
-                <td><span>NT$2400</span></td>
-              </tr>
+              <tfoot>
+                <tr>
+                  <td>2</td>
+                  <td>NT$1760</td>
+                </tr>
+              </tfoot>
             </table>
           </div>
           <div class="order-info">
@@ -167,18 +214,20 @@
                   <label for="customer_phone">電話 Phone Number</label>
                 </div>
                 <div class="form_item">
-                  <input
-                    id="customer_id"
-                    name="customer_id"
-                    type="text"
-                    placeholder="請輸入身分證字號"
-                    onkeyup="value=value.replace(/[\W]/g,'') "
-                    onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"
-                    required
-                  />
+                  <div class="customer-id">
+                    <input
+                      id="customer_id"
+                      name="customer_id"
+                      type="text"
+                      placeholder="請輸入身分證字號"
+                      onkeyup="value=value.replace(/[\W]/g,'') "
+                      onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"
+                      required
+                    />
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
                   <label for="customer_id">身分證 ID</label>
                 </div>
-                <i class="fa-solid fa-circle-check"></i>
                 <div class="form_item">
                   <input
                     id="customer_receipt"
@@ -205,7 +254,7 @@
             </div>
             <div class="order-info__bank">
               <h4>匯款資料</h4>
-              <div>
+              <div class="order-info__bank__text">
                 <p>銀行名稱：台灣銀行 城中分行</p>
                 <p>銀行代碼：004</p>
                 <p>匯款帳戶：0023-0802-8100-2961</p>
@@ -249,7 +298,9 @@
               <p>**匯款後將與您確認匯款後5碼</p>
             </div>
           </div>
-          <input type="submit" value="確認訂單" />
+          <div class="form-button">
+            <input class="a_buttons-lg" type="submit" value="確認訂單" />
+          </div>
         </form>
         <i class="fa-solid fa-circle-chevron-up go-top"></i>
       </main>

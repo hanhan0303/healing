@@ -1,5 +1,363 @@
+.order-main {
+  padding: 0 13%;
+
+  @include pc-1080 {
+    padding: 0 5%;
+  }
+
+  @include mobile {
+    padding: 0 3%;
+  }
+}
+
 .order-step {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  padding: 240px 0 100px;
+  @include font_size_500M-text;
+  color: $primary_color-dark;
+  text-align: center;
+
+  @include pc-1080 {
+    padding: 140px 0 80px;
+  }
+
+  @include mobile {
+    padding: 130px 0 60px;
+    font-size: 16px;
+  }
+
+  &__item {
+    @include flex-center;
+    flex-direction: column;
+
+    div {
+      @include flex-center;
+      width: 100px;
+      height: 100px;
+      border: 1px solid $primary_color-dark;
+      border-radius: 50%;
+      font-size: 36px;
+      margin-bottom: 5px;
+
+      @include pad {
+        width: 90px;
+        height: 90px;
+      }
+
+      @include mobile {
+        width: 70px;
+        height: 70px;
+        font-size: 32px;
+      }
+    }
+
+    .step-active {
+      position: relative;
+      color: #ffffff;
+      background-color: $primary_color-dark;
+      box-shadow: 0px 0px 5px $primary_color-dark;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: -6px;
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        border: 1px dashed $text_color-default;
+        animation: spin 5s linear infinite;
+
+        @include pad {
+          width: 100px;
+          height: 100px;
+        }
+
+        @include mobile {
+          width: 80px;
+          height: 80px;
+        }
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+}
+
+.order-content {
+  padding: 40px 5%;
+  border: 1px solid $text_color-dark;
+
+  @include pad {
+    display: none;
+  }
+
+  h3 {
+    @include font_size_500L-text;
+    color: $text_color-dark;
+  }
+
+  table {
+    width: 100%;
+    text-align: center;
+
+    th {
+      @include font_size_500M-text;
+      color: $text_color-dark;
+      padding: 20px 0;
+
+      &:nth-of-type(1) {
+        text-align: left;
+      }
+    }
+
+    td {
+      @include font_size_400S-text;
+      padding: 20px 0;
+      vertical-align: middle;
+
+      img {
+        border: 1px solid $text_color-dark;
+        border-radius: 10px;
+      }
+
+      &:nth-of-type(1) {
+        width: 25%;
+      }
+
+      &:nth-of-type(2) {
+        width: 40%;
+        padding-left: 2%;
+        text-align: left;
+      }
+
+      &:nth-of-type(3) {
+        width: 17%;
+
+        select {
+          font-size: 20px;
+          border: 1px solid transparent;
+          height: 50px;
+          width: 60px;
+          border-radius: 10px;
+          padding: 5px;
+          cursor: pointer;
+          outline: none;
+          transform: translateX(8px);
+        }
+      }
+
+      &:nth-of-type(4) {
+        width: 18%;
+      }
+    }
+  }
+
+  thead {
+    border-bottom: 1px solid $text_color-dark;
+  }
+
+  tbody {
+    border-bottom: 1px solid $text_color-dark;
+  }
+
+  &_1280show {
+    display: none;
+    @include font_size_400S-text;
+    padding: 35px 30px;
+    border: 1px solid $text_color-dark;
+
+    @include pad {
+      display: block;
+    }
+
+    h3 {
+      @include font_size_500L-text;
+      color: $text_color-dark;
+    }
+
+    h4 {
+      @include font_size_500M-text;
+      color: $text_color-dark;
+      margin-top: 20px;
+    }
+
+    &__text {
+      img {
+        width: 220px;
+        border: 1px solid $text_color-dark;
+        border-radius: 10px;
+        margin: 20px 0;
+
+        @include pad {
+          width: 310px;
+        }
+
+        @include mobile {
+          width: 100%;
+        }
+      }
+    }
+
+    table {
+      width: 100%;
+      margin-top: 30px;
+
+      th {
+        @include font_size_500M-text;
+        color: $text_color-dark;
+
+        &:nth-child(1) {
+          width: 60%;
+          text-align: left;
+          padding-left: 22px;
+        }
+      }
+
+      td {
+        @include font_size_400S-text;
+        padding: 20px 0;
+        text-align: center;
+
+        &:nth-child(1) {
+          width: 60%;
+          text-align: left;
+          padding-left: 25px;
+        }
+
+        select {
+          font-size: 20px;
+          border: 1px solid transparent;
+          height: 50px;
+          width: 60px;
+          border-radius: 10px;
+          padding: 5px;
+          cursor: pointer;
+          outline: none;
+        }
+      }
+
+      tfoot {
+        border-top: 1px solid $text_color-dark;
+
+        tr:last-child td:first-child {
+          padding-left: 35px;
+        }
+      }
+    }
+  }
+}
+
+.order-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+  margin-bottom: 90px;
+
+  @include pad {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  &__apply {
+    border: 1px solid $text_color-dark;
+    width: 50%;
+    padding: 40px 5%;
+
+    @include pad {
+      width: 100%;
+      margin-bottom: 60px;
+    }
+
+    h4 {
+      @include font_size_500M-text;
+      color: #ffffff;
+      background-color: $text_color-dark;
+      text-align: center;
+      border-radius: 10px;
+      width: 215px;
+      padding: 10px 0;
+    }
+
+    p {
+      @include font_size_500XS;
+      color: $text_color-dark;
+      margin: 5px 0;
+    }
+
+    div>div>div.customer-id {
+      position: relative;
+
+      input {
+        width: 100%;
+      }
+
+      i {
+        position: absolute;
+        right: 16px;
+        top: 25%;
+        color: $primary_color-default;
+        font-size: 24px;
+      }
+
+      &+label::after {
+        content: '必填';
+        color: #AE1914;
+        font-size: 14px;
+        cursor: default;
+      }
+    }
+  }
+
+  &__bank {
+    border: 1px solid $text_color-dark;
+    width: 45%;
+    padding: 40px 5%;
+
+    @include pad {
+      width: 100%;
+    }
+
+    &__text {
+      @include font_size_400S-text;
+      padding: 24px 0;
+    }
+
+    h4 {
+      @include font_size_500M-text;
+      color: $text_color-dark;
+
+      &:nth-child(1) {
+        color: #ffffff;
+        background-color: $text_color-dark;
+        border-radius: 10px;
+        width: 215px;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      &:nth-child(2) {
+        margin-top: 30px;
+      }
+    }
+
+    div:last-of-type+p {
+      @include font_size_400S-text;
+      margin-top: 25px;
+    }
+  }
+}
+
+.form-button {
+  @include flex-center;
 }
