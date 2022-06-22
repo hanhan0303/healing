@@ -661,7 +661,6 @@ footer {
   padding-top: 237px;
   padding-bottom: 194px;
   padding-left: 23.4vw;
-  /*因應rwd改vw-怕破版所以只設一邊*/
 }
 @media (max-width: 768px) {
   .about {
@@ -680,9 +679,7 @@ footer {
   position: relative;
   background-color: #fff7f0;
   width: 61.46vw;
-  /*因應rwd所以算出寬度是佔多少vw*/
   padding: 64px 5.9% 75px 20%;
-  /*因應rwd所以改成%數-只有寬度改變.高度固定*/
   border-radius: 20px;
 }
 @media (max-width: 768px) {
@@ -1046,11 +1043,6 @@ main > i.go-top {
 @media (max-width: 768px) {
   main > i.go-top {
     font-size: 36px;
-  }
-}
-@media (max-width: 414px) {
-  main > i.go-top {
-    font-size: 30px;
   }
 }
 
