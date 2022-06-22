@@ -617,6 +617,7 @@ footer {
   right: 20.7vw;
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
+  letter-spacing: 6px;
   font-size: 48px;
   line-height: 1.25;
   color: #ffffff;
