@@ -3,17 +3,17 @@ $(document).ready(() => {
    * Order Content
    */
   const productID = new URLSearchParams(window.location.search).get(
-    "product_id"
+    'product_id',
   );
   const rawFormData = new URLSearchParams(window.location.search).get(
-    "formData"
+    'formData',
   );
   const formData = rawFormData ? JSON.parse(rawFormData) : null;
 
   const product = Products.find((p) => p.id === productID);
 
   if (!product) {
-    window.location.href = "index.html";
+    window.location.href = 'index.html';
   }
 
   const typeSetting = TypeSetting[product.category];
@@ -68,8 +68,8 @@ $(document).ready(() => {
   `);
 
   const $orderTableForMobile = $(`
-    <div class="order-content_1280show">
-      <div class="order-content_1280show__text">
+    <div class="order-content_768show">
+      <div class="order-content_768show__text">
         <h3>訂單內容</h3>
         <h4>商品</h4>
         <img src="${product.images[0]}" />
@@ -108,43 +108,43 @@ $(document).ready(() => {
   `);
 
   buildTableByWindowSize();
-  $(window).on("resize", buildTableByWindowSize);
+  $(window).on('resize', buildTableByWindowSize);
 
   function buildTableByWindowSize() {
     if (window.innerWidth <= 768) {
       mountOrderTable($orderTableForMobile);
       $orderTable.remove();
-      $orderTableForMobile.insertAfter($(".order-content"));
+      $orderTableForMobile.insertAfter($('.order-content'));
     } else {
       mountOrderTable($orderTable);
       $orderTableForMobile.remove();
-      $(".order-content").append($orderTable);
+      $('.order-content').append($orderTable);
     }
   }
 
   function mountOrderTable($table) {
-    const $totalSpan = $table.find("tfoot .total").first();
+    const $totalSpan = $table.find('tfoot .total').first();
     $table
-      .find("select[name=people]")
+      .find('select[name=people]')
       .first()
-      .on("change", (e) => {
+      .on('change', (e) => {
         $totalSpan.html(e.target.value * product.price);
       });
 
-    if (formData && formData["people"]) {
+    if (formData && formData['people']) {
       const field = $table.find(`select[name=people]`);
-      field.val(formData["people"]).change();
+      field.val(formData['people']).change();
     }
   }
 
   /**
    * Order Detail
    */
-  const $form = $("form.order-form");
-  const $customerPhoneField = $("input[name=customer_phone]");
-  const $customerIDField = $("input[name=customer_id]");
-  const $customerIDValidIcon = $(".customer-id .is-valid-id");
-  const $customerReceiptField = $("input[name=customer_receipt]");
+  const $form = $('form.order-form');
+  const $customerPhoneField = $('input[name=customer_phone]');
+  const $customerIDField = $('input[name=customer_id]');
+  const $customerIDValidIcon = $('.customer-id .is-valid-id');
+  const $customerReceiptField = $('input[name=customer_receipt]');
 
   if (formData) {
     Object.keys(formData).forEach((key) => {
@@ -154,21 +154,21 @@ $(document).ready(() => {
   }
 
   // Validation
-  $customerPhoneField.on("input", function () {
-    this.value = this.value.replace(/\D/g, "");
+  $customerPhoneField.on('input', function () {
+    this.value = this.value.replace(/\D/g, '');
   });
-  $customerIDField.on("input", function () {
-    this.value = this.value.replace(/\W/g, "");
+  $customerIDField.on('input', function () {
+    this.value = this.value.replace(/\W/g, '');
     if (checkTwID(this.value)) {
-      $customerIDValidIcon.css("visibility", "visible");
+      $customerIDValidIcon.css('visibility', 'visible');
     } else {
-      $customerIDValidIcon.css("visibility", "hidden");
+      $customerIDValidIcon.css('visibility', 'hidden');
     }
   });
-  $customerReceiptField.on("input", function () {
-    this.value = this.value.replace(/\D/g, "");
+  $customerReceiptField.on('input', function () {
+    this.value = this.value.replace(/\D/g, '');
   });
-  $form.on("submit", function (e) {
+  $form.on('submit', function (e) {
     e.preventDefault();
     const $this = $(this);
     const formData = $this
@@ -177,9 +177,9 @@ $(document).ready(() => {
         json[name] = value;
         return json;
       }, {});
-    formData["productID"] = productID;
-    window.location.href = `${$this.attr("action")}?formData=${JSON.stringify(
-      formData
+    formData['productID'] = productID;
+    window.location.href = `${$this.attr('action')}?formData=${JSON.stringify(
+      formData,
     )}`;
   });
 });
@@ -193,7 +193,7 @@ function checkTwID(id) {
   if (id.search(/^[A-Z](1|2)\d{8}$/i) === -1) {
     return false;
   } else {
-    id = id.split("");
+    id = id.split('');
     let total = city[id[0].charCodeAt(0) - 65];
     for (let i = 1; i <= 8; i++) {
       total += eval(id[i]) * (9 - i);

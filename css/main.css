@@ -1794,7 +1794,7 @@ main > i.go-top {
 .order-content tbody {
   border-bottom: 1px solid #584024;
 }
-.order-content_1280show {
+.order-content_768show {
   display: none;
   font-size: 1.25rem;
   font-weight: 400;
@@ -1804,18 +1804,18 @@ main > i.go-top {
   border: 1px solid #584024;
 }
 @media (max-width: 768px) {
-  .order-content_1280show {
+  .order-content_768show {
     display: block;
   }
 }
-.order-content_1280show h3 {
+.order-content_768show h3 {
   font-size: 2.25rem;
   font-weight: 500;
   line-height: 1.25;
   color: #a86c46;
   color: #584024;
 }
-.order-content_1280show h4 {
+.order-content_768show h4 {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.25;
@@ -1823,39 +1823,39 @@ main > i.go-top {
   color: #584024;
   margin-top: 20px;
 }
-.order-content_1280show__text img {
+.order-content_768show__text img {
   width: 220px;
   border: 1px solid #584024;
   border-radius: 10px;
   margin: 20px 0;
 }
 @media (max-width: 768px) {
-  .order-content_1280show__text img {
+  .order-content_768show__text img {
     width: 310px;
   }
 }
 @media (max-width: 414px) {
-  .order-content_1280show__text img {
+  .order-content_768show__text img {
     width: 100%;
   }
 }
-.order-content_1280show table {
+.order-content_768show table {
   width: 100%;
   margin-top: 30px;
 }
-.order-content_1280show table th {
+.order-content_768show table th {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.25;
   color: #a86c46;
   color: #584024;
 }
-.order-content_1280show table th:nth-child(1) {
+.order-content_768show table th:nth-child(1) {
   width: 60%;
   text-align: left;
   padding-left: 22px;
 }
-.order-content_1280show table td {
+.order-content_768show table td {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.4;
@@ -1863,12 +1863,12 @@ main > i.go-top {
   padding: 20px 0;
   text-align: center;
 }
-.order-content_1280show table td:nth-child(1) {
+.order-content_768show table td:nth-child(1) {
   width: 60%;
   text-align: left;
   padding-left: 25px;
 }
-.order-content_1280show table td select {
+.order-content_768show table td select {
   font-size: 20px;
   border: 1px solid transparent;
   height: 50px;
@@ -1878,10 +1878,10 @@ main > i.go-top {
   cursor: pointer;
   outline: none;
 }
-.order-content_1280show table tfoot {
+.order-content_768show table tfoot {
   border-top: 1px solid #584024;
 }
-.order-content_1280show table tfoot tr:last-child td:first-child {
+.order-content_768show table tfoot tr:last-child td:first-child {
   padding-left: 35px;
 }
 

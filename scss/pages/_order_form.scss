@@ -171,7 +171,7 @@
     border-bottom: 1px solid $text_color-dark;
   }
 
-  &_1280show {
+  &_768show {
     display: none;
     @include font_size_400S-text;
     padding: 35px 30px;
