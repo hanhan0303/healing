@@ -3,19 +3,87 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -25,8 +93,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -34,17 +111,21 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
   content: none;
 }
 
@@ -98,7 +179,7 @@ img {
   position: relative;
   max-width: 1920px;
   margin: 0px auto;
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
 hr {
@@ -414,8 +495,8 @@ footer {
   box-shadow: 0px 0px 0px 4px rgba(88, 64, 36, 0.4);
 }
 .form_item input:required + label::after {
-  content: "必填";
-  color: #AE1914;
+  content: '必填';
+  color: #ae1914;
   font-size: 14px;
   cursor: default;
 }
@@ -447,9 +528,9 @@ footer {
   justify-content: space-between;
   align-items: center;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   padding: 25px 15px;
 }
 .qa > li > input {
@@ -552,7 +633,7 @@ footer {
   border-radius: 30px;
 }
 .mouse-scroll:before {
-  content: "";
+  content: '';
   position: absolute;
   left: 14px;
   top: 10px;
@@ -562,7 +643,7 @@ footer {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 8px;
   -webkit-animation: scroll-ani 1s linear infinite;
-          animation: scroll-ani 1s linear infinite;
+  animation: scroll-ani 1s linear infinite;
 }
 
 @-webkit-keyframes scroll-ani {
@@ -616,14 +697,14 @@ footer {
   top: 26.1vh;
   right: 20.7vw;
   -ms-writing-mode: tb-rl;
-      writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
   font-size: 48px;
   line-height: 1.25;
   color: #ffffff;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .banner h2 i {
@@ -938,7 +1019,7 @@ footer {
   height: 395px;
   border-radius: 0 20px 20px 0;
   padding: 137px 3.75vw 161px 8.86vw;
-  background: url("/images/logo-02-white.png") no-repeat -100px 120px, #fff7f0;
+  background: url('/images/logo-02-white.png') no-repeat -100px 120px, #fff7f0;
   background-size: 340px;
   align-self: flex-end;
 }
@@ -990,7 +1071,12 @@ footer {
   .feedback .feedback__card-slider .card-slider .slick-slider .slick-list {
     margin: 0 -13px;
   }
-  .feedback .feedback__card-slider .card-slider .slick-slider .slick-list .slick-slide {
+  .feedback
+    .feedback__card-slider
+    .card-slider
+    .slick-slider
+    .slick-list
+    .slick-slide {
     margin: 0 13px;
   }
 }
@@ -1007,13 +1093,22 @@ footer {
   color: #a86c46;
   margin-top: 9px;
 }
-.feedback .feedback__card-slider .card-slider .card-slider__slide div.star-icon {
+.feedback
+  .feedback__card-slider
+  .card-slider
+  .card-slider__slide
+  div.star-icon {
   margin: 6px 0;
   color: #fec89a;
   font-size: 24px;
   text-align: center;
 }
-.feedback .feedback__card-slider .card-slider .card-slider__slide div.star-icon span {
+.feedback
+  .feedback__card-slider
+  .card-slider
+  .card-slider__slide
+  div.star-icon
+  span {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.4;
@@ -1680,7 +1775,7 @@ main > i.go-top {
   box-shadow: 0px 0px 5px #e8b78e;
 }
 .order-step__item .step-active::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -6px;
   left: -6px;
@@ -1689,7 +1784,7 @@ main > i.go-top {
   border-radius: 50%;
   border: 1px dashed #a86c46;
   -webkit-animation: spin 5s linear infinite;
-          animation: spin 5s linear infinite;
+  animation: spin 5s linear infinite;
 }
 @media (max-width: 768px) {
   .order-step__item .step-active::before {
@@ -1942,7 +2037,7 @@ main > i.go-top {
   font-size: 24px;
 }
 .order-info__apply div > div > div.customer-id + label::after {
-  content: "必填";
+  content: '必填';
   color: #ae1914;
   font-size: 14px;
   cursor: default;
