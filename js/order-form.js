@@ -17,7 +17,7 @@ $(document).ready(() => {
   }
 
   const typeSetting = TypeSetting[product.category];
-  const minAmount = 2;
+  const minAmount = 1;
 
   const $orderTable = $(`
     <table>
@@ -42,6 +42,7 @@ $(document).ready(() => {
           </td>
           <td>
             <select name="people">
+              <option value="1">&thinsp;1</option>
               <option value="2">&thinsp;2</option>
               <option value="3">&thinsp;3</option>
               <option value="4">&thinsp;4</option>
@@ -84,6 +85,7 @@ $(document).ready(() => {
         <tr>
           <td>
             <select name="people">
+              <option value="1">&thinsp;1</option>
               <option value="2">&thinsp;2</option>
               <option value="3">&thinsp;3</option>
               <option value="4">&thinsp;4</option>
