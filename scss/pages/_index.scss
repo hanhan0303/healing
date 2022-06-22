@@ -253,12 +253,24 @@
         //@include mobile {
         //  width: $products_item_width_mobile;
         //}
-
-        img {
+        &-image {
+          display: block;
           border-radius: 20px;
           border-width: $products_img_border;
           border-style: solid;
           border-color: $primary_color-dark;
+          overflow: hidden;
+
+        }
+
+        img {
+          transition: transform 0.3s ease-in-out, filter 0.3s linear;
+          transform: scale(1.1);
+
+          &:hover {
+            transform: scale(1.15);
+            filter: brightness(110%);
+          }
         }
       }
     }

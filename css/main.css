@@ -871,7 +871,7 @@ footer {
   text-overflow: ellipsis;
   overflow: hidden;
   align-self: flex-start;
-  margin-top: 16px;
+  margin-top: 14px;
 }
 .products .card-slider > .card-slider__slides li p {
   font-size: 1rem;
@@ -883,19 +883,29 @@ footer {
   white-space: normal;
   word-wrap: break-word;
   overflow: hidden;
-  margin-top: 16px;
+  margin-top: 14px;
 }
 .products .card-slider > .card-slider__slides li a {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 .products .card-slider > .card-slider__slides .card-slider__slide {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
-.products .card-slider > .card-slider__slides .card-slider__slide img {
+.products .card-slider > .card-slider__slides .card-slider__slide-image {
+  display: block;
   border-radius: 20px;
   border-width: 1px;
   border-style: solid;
   border-color: #e8b78e;
+  overflow: hidden;
+}
+.products .card-slider > .card-slider__slides .card-slider__slide img {
+  transition: transform 0.3s ease-in-out, filter 0.3s linear;
+  transform: scale(1.1);
+}
+.products .card-slider > .card-slider__slides .card-slider__slide img:hover {
+  transform: scale(1.15);
+  filter: brightness(110%);
 }
 
 .feedback {
@@ -1310,17 +1320,27 @@ main > i.go-top {
     width: 90vw;
   }
 }
+.products-list__main li a.products-list__main-image {
+  display: block;
+  border: 1px solid #e8b78e;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.products-list__main li a.products-list__main-image img {
+  transition: transform 0.3s ease-in-out, filter 0.3s linear;
+  transform: scale(1.1);
+}
+.products-list__main li a.products-list__main-image img:hover {
+  transform: scale(1.15);
+  filter: brightness(110%);
+}
 .products-list__main li div {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.products-list__main li div:nth-child(1) img {
-  border: 1px solid #e8b78e;
-  border-radius: 20px;
-}
-.products-list__main li div:nth-child(2) h3 {
+.products-list__main li div h3 {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.25;
@@ -1330,9 +1350,9 @@ main > i.go-top {
   text-align: center;
   text-overflow: ellipsis;
   overflow: hidden;
-  margin-top: 16px;
+  margin-top: 15px;
 }
-.products-list__main li div:nth-child(2) p {
+.products-list__main li div p {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4;
@@ -1342,7 +1362,7 @@ main > i.go-top {
   overflow: hidden;
   margin-top: 16px;
 }
-.products-list__main li div:nth-child(2) a {
+.products-list__main li div a {
   margin-top: 16px;
 }
 

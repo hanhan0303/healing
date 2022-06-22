@@ -29,7 +29,7 @@ $products_item_grid: calc((99vw - (#{$products_item_width} * 3) - (#{$products_i
 $products_item_grid_pc:calc((99vw - (#{$products_item_width_pc} * 2) - (#{$products_img_border} * 4)) / 3);
 $products_item_grid_pad:calc((99vw - (#{$products_item_width_pad} * 2) - (#{$products_img_border} * 4)) / 3);
 $products_item_grid_mobile: calc((99vw - #{$products_item_width_mobile} - (#{$products_img_border} * 2)) / 2);
-$products_item_text-margin: 16px;
+$products_item_text-margin: 14px;
 
 /*index首頁-feedback的區塊*/
 $feedback_padding_r:7.56vw;

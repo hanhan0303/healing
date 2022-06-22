@@ -72,7 +72,7 @@ function renderProductList(category = 'all', sorting = 'launch_time_desc') {
   const $products = sortedProducts.map(function (product) {
     return $(`
 <li>
-		<div><img src="${product.images[0]}" alt="商品圖片" /></div>
+		<a class="products-list__main-image" href="${product.href}"><img src="${product.images[0]}" alt="商品圖片" /></a>
 		<div>
 				<h3>${product.title}</h3>
 				<p>${product.description}</p>
