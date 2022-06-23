@@ -9,10 +9,10 @@
     text-align: center;
     border: 1px solid $primary_color-dark;
     border-radius: 20px;
-    background-color: $grayscale-tint;
+    background-color: $primary_color-tint;
 
     &:hover {
-      color: $grayscale-tint;
+      color: $primary_color-tint;
       background-color: $primary_color-dark;
     }
 
@@ -31,10 +31,10 @@
     text-align: center;
     border: 1px solid $primary_color-dark;
     border-radius: 20px;
-    background-color: $grayscale-tint;
+    background-color: $primary_color-tint;
 
     &:hover {
-      color: $grayscale-tint;
+      color: $primary_color-tint;
       background-color: $primary_color-dark;
     }
 
@@ -53,10 +53,10 @@
     text-align: center;
     border: 1px solid $primary_color-dark;
     border-radius: 15px;
-    background-color: $grayscale-tint;
+    background-color: $primary_color-tint;
 
     &:hover {
-      color: $grayscale-tint;
+      color: $primary_color-tint;
       background-color: $primary_color-dark;
     }
 

@@ -98,7 +98,24 @@ footer {
         @include pad {
           margin-left: 3vw;
         }
+      }
 
+      &-active {
+        @include font_size_500S;
+        display: inline-block;
+        width: 292px;
+        height: 68px;
+        padding: 20px;
+        color: $primary_color-dark;
+        text-align: center;
+        border: 1px solid $primary_color-dark;
+        border-radius: 20px;
+        background-color: $primary_color-tint;
+
+        &:hover {
+          color: $primary_color-tint;
+          background-color: $primary_color-dark;
+        }
       }
     }
   }
