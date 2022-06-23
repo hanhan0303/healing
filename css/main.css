@@ -608,7 +608,23 @@ footer {
   display: flex;
   position: relative;
   justify-content: flex-end;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+}
+@media (max-width: 1080px) {
+  .card-slider-nav {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .card-slider-nav {
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 414px) {
+  .card-slider-nav {
+    margin-bottom: 20px;
+  }
 }
 .card-slider-nav div {
   width: 50px;
@@ -843,6 +859,14 @@ footer {
     text-align: center;
   }
 }
+@media (max-width: 414px) {
+  .products h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.25;
+    color: #a86c46;
+  }
+}
 .products p {
   font-size: 1.25rem;
   font-weight: 400;
@@ -852,6 +876,14 @@ footer {
 @media (max-width: 768px) {
   .products p {
     text-align: center;
+  }
+}
+@media (max-width: 414px) {
+  .products p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #584024;
   }
 }
 .products .card-slider .slick-list {
@@ -974,12 +1006,28 @@ footer {
   line-height: 1.25;
   color: #a86c46;
 }
+@media (max-width: 414px) {
+  .feedback .feedback__title h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.25;
+    color: #a86c46;
+  }
+}
 .feedback .feedback__title p {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.4;
   color: #584024;
   margin-top: 24px;
+}
+@media (max-width: 414px) {
+  .feedback .feedback__title p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #584024;
+  }
 }
 @media (max-width: 1280px) {
   .feedback .feedback__title {
@@ -999,7 +1047,6 @@ footer {
   margin-left: 2.6vw;
 }
 .feedback .feedback__card-slider .card-slider {
-  height: 395px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -1452,6 +1499,14 @@ main > i.go-top {
   line-height: 1.25;
   color: #a86c46;
 }
+@media (max-width: 414px) {
+  .product__main h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.25;
+    color: #a86c46;
+  }
+}
 .product__main p {
   font-size: 1.25rem;
   font-weight: 400;
@@ -1459,6 +1514,14 @@ main > i.go-top {
   color: #584024;
   margin-top: 12px;
   margin-bottom: 30px;
+}
+@media (max-width: 414px) {
+  .product__main p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #584024;
+  }
 }
 .product__main__info {
   display: flex;

@@ -177,6 +177,10 @@
     @include pad {
       text-align: center;
     }
+
+    @include mobile {
+      @include font_size_500M-text;
+    }
   }
 
   p {
@@ -184,6 +188,10 @@
 
     @include pad {
       text-align: center;
+    }
+
+    @include mobile {
+      @include font_size_400XS-text;
     }
   }
 
@@ -319,11 +327,19 @@
 
     h3 {
       @include font_size_500L-text;
+
+      @include mobile {
+        @include font_size_500M-text;
+      }
     }
 
     p {
       @include font_size_400S-text;
       margin-top: 24px;
+
+      @include mobile {
+        @include font_size_400XS-text;
+      }
     }
 
     @include pc {
@@ -344,7 +360,6 @@
     margin-left: 2.6vw;
 
     .card-slider {
-      height: 395px;
       display: flex;
       flex-direction: column;
       width: 100%;

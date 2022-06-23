@@ -57,12 +57,20 @@
 
     h2 {
       @include font_size_500L-text;
+
+      @include mobile {
+        @include font_size_500M-text;
+      }
     }
 
     p {
       @include font_size_400S-text;
       margin-top: 12px;
       margin-bottom: 30px;
+
+      @include mobile {
+        @include font_size_400XS-text;
+      }
     }
 
     &__info {
