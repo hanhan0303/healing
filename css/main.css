@@ -340,11 +340,11 @@ footer {
   text-align: center;
   border: 1px solid #e8b78e;
   border-radius: 20px;
-  background-color: #fff7f0;
+  background-color: #ffffff;
 }
 .footer__content__btn-active:hover {
   color: #fff7f0;
-  background-color: #e8b78e;
+  background-color: #584024;
 }
 .footer__bottom {
   display: flex;
@@ -513,7 +513,7 @@ footer {
   text-align: center;
   border: 1px solid #e8b78e;
   border-radius: 20px;
-  background-color: #fff7f0;
+  background-color: #ffffff;
 }
 .a_buttons-lg:hover {
   color: #fff7f0;
@@ -531,7 +531,7 @@ footer {
   text-align: center;
   border: 1px solid #e8b78e;
   border-radius: 20px;
-  background-color: #fff7f0;
+  background-color: #ffffff;
 }
 .a_buttons-md:hover {
   color: #fff7f0;
@@ -549,7 +549,7 @@ footer {
   text-align: center;
   border: 1px solid #e8b78e;
   border-radius: 15px;
-  background-color: #fff7f0;
+  background-color: #ffffff;
 }
 .a_buttons-sm:hover {
   color: #fff7f0;

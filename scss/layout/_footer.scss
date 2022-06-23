@@ -110,11 +110,11 @@ footer {
         text-align: center;
         border: 1px solid $primary_color-dark;
         border-radius: 20px;
-        background-color: $primary_color-tint;
+        background-color: $grayscale-tint;
 
         &:hover {
           color: $primary_color-tint;
-          background-color: $primary_color-dark;
+          background-color: $text_color-dark;
         }
       }
     }
